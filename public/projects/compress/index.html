@@ -1,0 +1,219 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="js/bignumber.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/client.js"></script>
+</head>
+
+<body>
+  <!--<div id="dec2bin">
+    <input id="dec2binInput"><button id="dec2binButton">dec2bin</button>
+    <textarea id="dec2binOutput"></textarea>
+  </div>-->
+
+
+  <div class="panel-group">
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Decimal to Binary</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="dec2binInput" class="control-label">Dec input</label>
+            <textarea class="form-control" id="dec2binInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="dec2binButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="dec2binInput" class="control-label">Bin output</label>
+            <textarea class="form-control" id="dec2binOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Binary to Decimal</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="bin2decInput" class="control-label">Bin input</label>
+            <textarea class="form-control" id="bin2decInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="bin2decButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="bin2decInput" class="control-label">Dec output</label>
+            <textarea class="form-control" id="bin2decOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Decimal to Compressed</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="dec2compInput" class="control-label">Dec input</label>
+            <textarea class="form-control" id="dec2compInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="dec2compButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="dec2compInput" class="control-label">Compressed output</label>
+            <textarea class="form-control" id="dec2compOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Compressed to Decimal</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="comp2decInput" class="control-label">Compressed input</label>
+            <textarea class="form-control" id="comp2decInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="comp2decButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="comp2decInput" class="control-label">Dec output</label>
+            <textarea class="form-control" id="comp2decOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">ASCII to Binary</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="ascii2binInput" class="control-label">Text input</label>
+            <textarea class="form-control" id="ascii2binInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="ascii2binButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="ascii2binInput" class="control-label">Bin output</label>
+            <textarea class="form-control" id="ascii2binOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Binary to ASCII</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="bin2asciiInput" class="control-label">Binary input</label>
+            <textarea class="form-control" id="bin2asciiInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="bin2asciiButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="bin2asciiInput" class="control-label">Text output</label>
+            <textarea class="form-control" id="bin2asciiOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Binary to Compressed</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="bin2compInput" class="control-label">Binary input</label>
+            <textarea class="form-control" id="bin2compInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="bin2compButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="bin2compInput" class="control-label">Compressed output</label>
+            <textarea class="form-control" id="bin2compOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Compressed to Binary</h3>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="comp2binInput" class="control-label">Compressed input</label>
+            <textarea class="form-control" id="comp2binInput" rows="3"></textarea>
+          </div>
+          <div class="form-group col-xs-4 col-md-4 text-center vcenter">
+            <button type="submit" class="btn btn-default" id="comp2binButton">Convert</button>
+          </div>
+          <div class="form-group col-xs-4 col-md-4">
+            <label for="comp2binInput" class="control-label">Bin output</label>
+            <textarea class="form-control" id="comp2binOutput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+</body>
+
+</html>

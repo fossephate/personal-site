@@ -1,0 +1,230 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  
+}
+
+body {
+  
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+#canvas {
+  background-color: transparent;
+  background-image:url('images/carsonbg.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ui {
+  background-color: white;
+  font-family: Lucida Console;
+  text-align: center;
+  border:2px solid green;
+}
+
+
+/*bigger*/
+@media (min-width: 600px) {
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    border-radius: 0 0 100% 0;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+  }
+  #player {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 300px;
+    border-radius:    100%  0 0 0;
+    line-height: 100px;
+    text-align: center;
+    padding-top:20px;
+    padding-left:125px;
+  }
+  #score{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 0  100% 0 0;
+    padding-right:100px;
+    line-height: 100px;
+    text-align: center;
+    display: block;
+  }
+  
+  .shootbutton {
+    display:hidden;
+    
+
+    
+  }
+  
+  
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+    
+     #menu {
+       border-radius: 0 0 0 0;
+       border:0;
+       width:175px;
+       height:75px;
+       background-color:red;
+  }
+  #player {
+    
+    display:none;
+      width:75px;
+    
+    height:1242px;
+     border-radius: 0 0 0 0;
+    padding:0;
+    margin:0;
+    position: fixed;
+   border:0;
+    top:0;
+    right: 0;
+   
+  }
+    
+    #player marquee{
+      transform: rotate(90deg);
+      
+    }
+  #score{
+    border-radius: 0 0 0 0;
+    border:0;
+       width:175px;
+    height:75px;
+       background-color:blue;
+    padding:0;
+    
+  }
+  
+    .shootbutton {
+    display:block;
+    width:75px;
+    height:75px;
+    border-radius: 50%;
+    background-color:orange;
+    background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+    position:fixed;
+    text-align:center;
+    line-height:75px;
+    
+    
+    
+    
+  }
+  
+  
+  #shootup{
+   /*right:75px;
+    top:50px; */
+    
+    top:0;
+    left:45%;
+    
+  }
+  #shootdown{
+    /*right:75px;
+    top:200px; */
+    bottom:0;
+    left:45%;
+  }
+  #shootleft{
+    /*right:150px;
+    top:125px; */
+    
+    left:200px;
+    top:40%;
+    
+  }
+  #shootright{
+    /*right:10px;
+    top:125px; */
+    
+    right:200px;
+    top:40%;
+  }
+    
+    
+}
+
+
+
+
+/*smaller*/
+@media (max-width: 600px) {
+  #menu {
+    background-color: green;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    top: 0;
+    display: block;
+    border-radius: 0 0 10px 10px;
+  }
+  #player {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: green;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+   
+  }
+  
+  #score{
+    
+  }
+  
+}

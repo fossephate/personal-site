@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Music Game Test - JS Edition</title>
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <!--<script src="js/jquery.mobile-1.4.5.min.js"></script>-->
+  <script src="js/touchSwipe.min.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/projector.js"></script>
+  <script src="js/canvasRenderer.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/randomColor.js"></script>
+  <script src="js/stats.min.js"></script>
+  <script src="js/virtualjoystick.js"></script>
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/greenfav.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>>
+  <!--<img src="images/carsonbg.png" style="z-index:-5;">-->
+  <!--<canvas id="canvas" width="500" height="500">Whoops!</canvas>-->
+  <script src="js/main.js"></script>
+  <script src="js/gui.js"></script>
+
+  <!--<canvas id="guiCanvas"></canvas>-->
+  <div class="ui" id="menu">
+    <button onclick="location.reload();" type="button">REFRESH</button>
+    <script>
+      function revive() {
+        isDead = false;
+      }
+    </script>
+
+    <button onclick="revive();" id="startbutton" type="button">REVIVE</button>
+    <button onclick="start(); document.getElementById('startbutton').setAttribute('style', 'display:hidden');" type="button">
+      START
+    </button>
+  </div>
+
+  <div class="ui" id="player">
+    <marquee>Now Playing: "Like a G6" by Far East Movement</marquee>
+  </div>
+  <div class="ui" id="score">
+
+
+  </div>
+
+  <div class="shootbutton" id="shootup" onclick="spawnPew(1);">
+    shoot up
+  </div>
+  <div class="shootbutton" id="shootleft" onclick="spawnPew(3);">
+    shoot left
+  </div>
+  <div class="shootbutton" id="shootright" onclick="spawnPew(4);">
+    shoot right
+  </div>
+  <div class="shootbutton" id="shootdown" onclick="spawnPew(2);">
+    shoot down
+  </div>
+
+  <!--<p>
+    
+  </p>-->
+
+</body>
+
+</html>

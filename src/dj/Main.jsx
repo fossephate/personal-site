@@ -8,7 +8,7 @@ import { withRouter } from "react-router";
 import { connect } from "react-redux";
 
 // actions:
-import { updateSettings } from "main/actions/settings.js";
+import { updateSettings } from "main/features/settings.js";
 
 // redux-saga:
 

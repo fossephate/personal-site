@@ -55,6 +55,9 @@ redisClient.getAsync("parties").then((savedDB) => {
 	parties = database;
 	saveParties();
 });
+setInterval(() => {
+	saveParties();
+}, 1000 * 60);
 
 // setTimeout(() => {
 // 	for (let roomName in parties) {
@@ -254,8 +257,6 @@ io.on("connection", (socket) => {
 		if (client) {
 			delete clients[socket.id];
 		}
-
-		saveParties();
 		console.log(`#clients: ${Object.keys(clients).length}`);
 	});
 });

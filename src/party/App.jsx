@@ -40,7 +40,7 @@ const styles = {
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.socket = null;
+		this.serverConnection = null;
 
 		this.state = {
 			roomName: "",
@@ -49,11 +49,14 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		if (this.socket) {
-			this.socket.close();
-			this.socket = null;
+		if (this.serverConnection) {
+			this.serverConnection.close();
+			this.serverConnection = null;
 		}
-		this.socket = this.props.serverConnection;
+
+		this.serverConnection = this.props.serverConnection;
+
+		document.title = "Party Planner";
 
 		// // listen to events and dispatch actions:
 		// handleStreamEvents(this.socket, this.props.store.dispatch);
@@ -76,7 +79,7 @@ class App extends Component {
 	};
 
 	handleCreate = () => {
-		this.socket.emit("createRoom", null, (data) => {
+		this.serverConnection.emit("createRoom", null, (data) => {
 			if (data.success) {
 				this.setState({ open: true, roomName: data.roomName });
 			} else {
@@ -104,7 +107,7 @@ class App extends Component {
 			<div className={classes.root}>
 				<Switch>
 					<Route
-						path="/party/:roomName"
+						path={`${this.props.match.path}/:roomName`}
 						render={(props) => {
 							return (
 								<Room
@@ -117,7 +120,7 @@ class App extends Component {
 						}}
 					/>
 					<Route
-						path="/"
+						path={this.props.match.path}
 						render={(props) => {
 							return (
 								<Main

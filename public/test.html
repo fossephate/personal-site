@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<base href="/" />
+
+		<title>Fosse</title>
+		<link rel="icon" href="/images/TwitchPlaysNintendoSwitch.png" />
+		<meta
+			name="viewport"
+			content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+		/>
+
+		<!-- CSS -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono"
+		/>
+		<link rel="stylesheet" href="/css/stylesheet.css" />
+
+		<!-- <link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/> -->
+
+		<!-- <script src="/js/ads.js"></script> -->
+
+		<!-- ADS -->
+		<script
+			data-ad-client="ca-pub-6534908631362272"
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+		></script>
+	</head>
+
+	<body>
+		<p id="clickHere">
+			click here
+		</p>
+		<!-- <iframe src="https://fosse.co/test2.html" width="100" height="100"></iframe> -->
+		<script>
+			let clickHere = document.getElementById("clickHere");
+
+			window.name = "parent";
+
+			// let fn = () => {
+			// 	console.log("does nothing");
+			// };
+
+			function createWindow() {
+				window.open("https://www.example.com");
+			}
+
+			// setInterval(() => {
+			// 	console.log("opening window");
+			// 	window.open("https://www.example.com");
+			// }, 5000);
+
+			// setTimeout(() => {
+			// 	fn();
+			// }, 5000);
+
+			// clickHere.addEventListener("mousedown", () => {
+			// 	let window3 = window.open(
+			// 		"https://www.example.com",
+			// 		"_blank",
+			// 		"width=100, height=100",
+			// 	);
+			// 	let window2 = window.open("https://www.example.com");
+			// 	window2.close();
+			// 	// refresh:
+			// 	// window.open("test.html", "_self");
+			// 	// console.log("test1");
+			// });
+			clickHere.addEventListener("mousedown", () => {
+				// setTimeout(() => {
+				// 	window.open("test2.html", "_blank", "width=100, height=100");
+				// }, 5000);
+				let window3 = window.open("test2.html", "_blank", "width=100, height=100");
+				window3.focus();
+
+				// let window3 = window.open(
+				// 	"https://www.example.com",
+				// 	"_blank",
+				// 	"width=100, height=100",
+				// );
+				// let window3 = window.open("https://www.example.com");
+
+				// fn = createWindow;
+
+				// setTimeout(() => {
+				// 	createWindow();
+				// 	// fn();
+				// }, 2000);
+				// fn = createWindow;
+				// // refresh:
+				// window.open("test.html", "_self");
+				// console.log("test1");
+			});
+			clickHere.addEventListener("mouseup", () => {
+				let window2 = window.open("https://www.example.com");
+				// window2.close();
+				// alert("aaa");
+				// window.focus();
+			});
+
+			window.addEventListener(
+				"focus",
+				function(event) {
+					// document.getElementById("message").innerHTML = "window has focus " + nCounter;
+					// nCounter = nCounter + 1;
+					// console.log("got focus");
+					window.open("https://www.example.com");
+				},
+				false,
+			);
+		</script>
+	</body>
+</html>

@@ -9,18 +9,9 @@ import { connect } from "react-redux";
 
 // material ui:
 import { withStyles } from "@material-ui/core/styles";
-// import { Snackbar } from "@material-ui/core";
-
-// notistack:
-
-import { withSnackbar } from "notistack";
 
 // main components:
-
-// components:
-
-// secondary components:
-import { Button } from "@material-ui/core";
+import ProjectList from "main/components/general/ProjectList.jsx";
 
 // recompose:
 import { compose } from "recompose";
@@ -34,7 +25,7 @@ const styles = {
 		display: "flex",
 		flexDirection: "column",
 		width: "100%",
-		height: "100vh",
+		// height: "100vh",
 		justifyContent: "center",
 		margin: "0 auto",
 		maxWidth: "700px",
@@ -61,27 +52,14 @@ class App extends Component {
 
 	componentDidMount() {}
 
-	componentWillUnmount() {
-		// save settings on close:
-		console.log("saving settings");
-		localforage.setItem("settings", JSON.stringify(this.props.settings));
-	}
+	componentWillUnmount() {}
 
 	shouldComponentUpdate(nextProps, nextState) {
-		// all settings:
-		if (JSON.stringify(this.props.settings) != JSON.stringify(nextProps.settings)) {
-			return false;
-		}
-
-		if (this.state != nextState) {
-			return true;
-		}
-
 		return false;
 	}
 
 	render() {
-		console.log("re-rendering stream.");
+		console.log("re-rendering app.");
 
 		const { classes } = this.props;
 
@@ -91,26 +69,7 @@ class App extends Component {
 					history={this.props.history}
 				/> */}
 
-				<div className={classes.links}>
-					<Button
-						variant="contained"
-						color="primary"
-						onClick={() => {
-							window.location.href = "/party";
-						}}
-					>
-						Party Planner
-					</Button>
-					<Button
-						variant="contained"
-						color="primary"
-						onClick={() => {
-							window.location.href = "/dj";
-						}}
-					>
-						Democratic DJ
-					</Button>
-				</div>
+				<ProjectList />
 
 				{/* selects the first matching path: */}
 			</div>
@@ -129,6 +88,5 @@ const mapDispatchToProps = (dispatch) => {
 export default compose(
 	withRouter,
 	withStyles(styles),
-	withSnackbar,
 	connect(mapStateToProps, mapDispatchToProps),
 )(App);

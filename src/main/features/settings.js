@@ -1,18 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const settingsSlice = createSlice({
-	name: "client",
-	initialState: {},
+	name: "settings",
+	initialState: {
+		theme: "dark",
+	},
 	reducers: {
-		changeUsernameIndex(state, action) {
-			state.usernameIndex = action.payload.usernameIndex;
-			// state = { ...state, action.payload.usernameIndex };
-			return state;
-		},
-		updateClient(state, action) {
-			return (state = { ...state, ...action.payload });
+		updateSettings(state, action) {
+			return { ...state, ...action.payload }; // sets entire state
 		},
 	},
 });
-export const { changeUsernameIndex, updateClient } = clientSlice.actions;
+export const { updateSettings } = settingsSlice.actions;
 export default settingsSlice.reducer;

@@ -5,9 +5,13 @@ class Client {
 		this.username = null;
 		this.roomName = null;
 		this.joinTime = new Date();
-		this.isHost = false;
 
 		this.songsSubmitted = 0;
+
+		this.accessToken = null;
+		this.refreshToken = null;
+		this.code = null;
+		this.tokenExpiration = null;
 
 		// this.ip = this.socket.handshake.headers["x-real-ip"];
 		// this.port = this.socket.handshake.headers["x-real-port"];
@@ -116,6 +120,10 @@ class Party {
 		this.songList = data.songList;
 		this.previousSongListJSON = data.previousSongListJSON;
 		this.submissionCounts = data.submissionCounts;
+		this.accessToken = data.accessToken;
+		this.refreshToken = data.refreshToken;
+		this.code = data.code;
+		this.tokenExpiration = data.tokenExpiration;
 	}
 
 	recreateSongList(spotifyApi) {
@@ -127,18 +135,21 @@ class Party {
 			});
 			newSong.votes = oldSong.votes;
 			newSong.votedUsernames = oldSong.votedUsernames;
-			let trackURI = /^spotify:track:(.+)$/.exec(oldSong.songData.uri)[1];
-			spotifyApi
-				.getTrack(trackURI)
-				.then((res) => {
-					let newURL = res.body.preview_url || oldSong.songData.preview_url;
-					newSong.preview_url = newURL;
-					newSong.songData.preview_url = newURL;
-				})
-				.catch((error) => {
-					console.log("promise rejected");
-					console.log(error);
-				});
+			let newURL = oldSong.songData.preview_url || null;
+			newSong.preview_url = newURL;
+			newSong.songData.preview_url = newURL;
+			// let trackURI = /^spotify:track:(.+)$/.exec(oldSong.songData.uri)[1];
+			// spotifyApi
+			// 	.getTrack(trackURI)
+			// 	.then((res) => {
+			// 		let newURL = res.body.preview_url || oldSong.songData.preview_url;
+			// 		newSong.preview_url = newURL;
+			// 		newSong.songData.preview_url = newURL;
+			// 	})
+			// 	.catch((error) => {
+			// 		console.log("promise rejected");
+			// 		console.log(error);
+			// 	});
 			newSongList.push(newSong);
 		}
 

@@ -12,7 +12,7 @@ import { connect } from "react-redux";
 // main components:
 
 // components:
-import Results from "party/components/General/Results.jsx";
+import Results from "party/components/general/Results.jsx";
 
 // secondary components:
 import {

@@ -17,11 +17,13 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { SnackbarProvider } from "notistack";
 
 // components:
-import Loading from "main/components/General/Loading.jsx";
-const App = lazy(() => import("src/App.jsx"));
+import Loading from "shared/components/general/Loading.jsx";
 
-const DJ = lazy(() => import("main/DJ.jsx"));
-const Party = lazy(() => import("main/Party.jsx"));
+const Callback = lazy(() => import("main/Callback.jsx"));
+const App = lazy(() => import("main/App.jsx"));
+const DJ = lazy(() => import("dj/Index.jsx"));
+const Party = lazy(() => import("party/Index.jsx"));
+const Email = lazy(() => import("email/Index.jsx"));
 
 // const DJ = lazy(() => import("dj/App.jsx"));
 // const Party = lazy(() => import("party/App.jsx"));
@@ -33,7 +35,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "main/reducers";
 
 // actions:
-import { updateSettings } from "main/actions/settings.js";
+import { updateSettings } from "main/features/settings.js";
 
 // redux-saga:
 import createSagaMiddleware from "redux-saga";
@@ -46,12 +48,10 @@ class Index extends Component {
 		super(props);
 
 		this.state = {
-			theme: createMuiTheme({}),
+			theme: this.getTheme("dark"),
 		};
 
 		let preloadedState = {
-			// client: {},
-
 			settings: {},
 
 			party: {},
@@ -78,30 +78,20 @@ class Index extends Component {
 		// Get stored preferences
 		localforage.getItem("settings").then((value) => {
 			let settings = {};
-			// If they exist, write them
+			// if they exist, write them
 			if (value) {
 				settings = Object.assign({}, JSON.parse(value));
-				settings.currentPlayer = 0; // same as above
-				settings.largescreen = false;
-				settings.fullscreen = false;
-				settings.mobileMode = false;
-				settings.hideChat = false;
-				settings.hideNav = false;
 			}
 
 			this.store.dispatch(updateSettings({ ...settings }));
 		});
 
-		this.switchTheme = this.switchTheme.bind(this);
-
 		let currentValue = null;
-		const unsubscribe = this.store.subscribe(() => {
+		this.store.subscribe(() => {
 			let previousValue = currentValue;
 			currentValue = this.store.getState().settings.theme;
-			if (previousValue !== currentValue) {
-				console.log("theme changed");
-				this.switchTheme(currentValue);
-				this.setState({});
+			if (previousValue !== currentValue && previousValue !== null) {
+				this.setState({ theme: this.getTheme(currentValue) });
 			}
 		});
 	}
@@ -110,7 +100,7 @@ class Index extends Component {
 		this.store.dispatch(updateSettings({ theme: "dark" }));
 	}
 
-	switchTheme(themeName) {
+	getTheme = (themeName) => {
 		let theme = {};
 		switch (themeName) {
 			case "light":
@@ -159,12 +149,11 @@ class Index extends Component {
 							paper: "#424242",
 						},
 					},
-				} /*)*/;
+				};
 				break;
 		}
-		// this.theme = createMuiTheme(this.theme);
-		this.setState({ theme: createMuiTheme(theme) });
-	}
+		return createMuiTheme(theme);
+	};
 
 	shouldComponentUpdate(nextProps, nextState) {
 		return true;
@@ -208,15 +197,27 @@ class Index extends Component {
 										}}
 									/> */}
 									<Route
-										path="/party/:roomName?"
+										path="/callback"
+										render={(props) => {
+											return <Callback {...props} store={this.store} />;
+										}}
+									/>
+									<Route
+										path="/party"
 										render={(props) => {
 											return <Party {...props} store={this.store} />;
 										}}
 									/>
 									<Route
-										path="/dj/:roomName?"
+										path="/dj"
 										render={(props) => {
 											return <DJ {...props} store={this.store} />;
+										}}
+									/>
+									<Route
+										path="/email"
+										render={(props) => {
+											return <Email {...props} store={this.store} />;
 										}}
 									/>
 									{/* order matters here, can't do exact path or /login and /register break: */}

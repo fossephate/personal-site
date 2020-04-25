@@ -8,7 +8,7 @@ import { Route, Switch, withRouter } from "react-router";
 import { connect } from "react-redux";
 
 // actions:
-import { updateSettings } from "main/actions/settings.js";
+import { updateSettings } from "main/features/settings.js";
 
 // redux-saga:
 
@@ -28,10 +28,6 @@ import { compose } from "recompose";
 
 // libs:
 import { device } from "shared/libs/utils.js";
-
-// libs:
-// import localforage from "localforage";
-// import swal from "sweetalert2";
 
 // jss:
 const styles = {
@@ -60,13 +56,15 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		if (this.socket) {
-			this.socket.close();
-			this.socket = null;
+		if (this.serverConnection) {
+			this.serverConnection.close();
+			this.serverConnection = null;
 		}
-		this.socket = this.props.serverConnection;
+		this.serverConnection = this.props.serverConnection;
 
 		this.props.store.dispatch(updateSettings({ theme: "spotify" }));
+
+		document.title = "Democratic DJ";
 
 		// // listen to events and dispatch actions:
 		// handleStreamEvents(this.socket, this.props.store.dispatch);
@@ -79,7 +77,7 @@ class App extends Component {
 	}
 
 	render() {
-		console.log("re-rendering app.");
+		console.log("re-rendering dj-app.");
 
 		const { classes } = this.props;
 
@@ -87,7 +85,7 @@ class App extends Component {
 			<div className={classes.root}>
 				<Switch>
 					<Route
-						path="/dj/:roomName"
+						path={`${this.props.match.path}/:roomName`}
 						render={(props) => {
 							return (
 								<Room
@@ -100,7 +98,7 @@ class App extends Component {
 						}}
 					/>
 					<Route
-						path="/"
+						path={this.props.match.path}
 						render={(props) => {
 							return (
 								<Main

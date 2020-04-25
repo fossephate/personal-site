@@ -8,20 +8,23 @@ import { withRouter } from "react-router";
 import { connect } from "react-redux";
 
 // redux-saga:
-import { updateSongList } from "dj/actions/songs.js";
+import { updateSongList } from "dj/features/songs.js";
 
 // main components:
 
 // components:
-import SongList from "dj/components/General/SongList.jsx";
-import SongSubmitForm from "dj/components/General/SongSubmitForm.jsx";
+import SongList from "dj/components/general/SongList.jsx";
+import SongSubmitForm from "dj/components/general/SongSubmitForm.jsx";
 
 // secondary components:
-import { Button, TextField } from "@material-ui/core";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
+import {
+	Button,
+	TextField,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogTitle,
+} from "@material-ui/core";
 
 // material ui:
 import { withStyles } from "@material-ui/core/styles";
@@ -31,6 +34,7 @@ import { compose } from "recompose";
 
 // libs:
 import { device } from "shared/libs/utils.js";
+import localforage from "localforage";
 
 // jss:
 const styles = {
@@ -61,9 +65,7 @@ const styles = {
 		// width: "50%",
 		height: "min-content",
 	},
-	exportButton: {
-		marginTop: "10px",
-	},
+	exportButton: {},
 };
 
 class Room extends PureComponent {
@@ -71,14 +73,12 @@ class Room extends PureComponent {
 		super(props);
 		this.socket = null;
 
-		this.handleSubmitUsername = this.handleSubmitUsername.bind(this);
-		this.handleText = this.handleText.bind(this);
-		this.handleCreatePlaylist = this.handleCreatePlaylist.bind(this);
-
 		this.state = {
 			username: "",
 			roomName: "",
-			openUsernameDialog: true,
+			openUsernameDialog: false,
+			loggedIn: false,
+			code: null,
 		};
 
 		this.roomName = null;
@@ -103,11 +103,54 @@ class Room extends PureComponent {
 		}
 
 		this.socket.on("songList", (data) => {
-			// this.songList = data.songList;
-			// this.setState({ songList: data.songList });
 			this.props.updateSongList(data.songList);
-			// this.props.store.dispatch(updateSongList({ songList: data.songList }));
 		});
+
+		localforage
+			.getItem("dj:roomInfo")
+			.then((value) => {
+				if (value) {
+					if (value.username) {
+						this.socket.emit(
+							"joinRoom",
+							{ roomName: this.roomName, username: value.username },
+							(data) => {
+								if (data.success) {
+									if (value.code) {
+										this.socket.emit("verifyToken", { code: value.code }, (data) => {
+											if (data.success) {
+												this.setState({
+													openUsernameDialog: false,
+													username: value.username,
+													loggedIn: true,
+													code: value.code,
+												});
+											} else {
+												console.log(data.reason);
+												this.setState({
+													openUsernameDialog: false,
+													username: value.username,
+												});
+											}
+										});
+									} else {
+										this.setState({ username: value.username });
+									}
+								} else {
+									this.setState({ openUsernameDialog: true });
+								}
+							},
+						);
+					} else {
+						localforage.clear();
+					}
+				} else {
+					this.setState({ openUsernameDialog: true });
+				}
+			})
+			.catch((error) => {
+				this.setState({ openUsernameDialog: true });
+			});
 	}
 
 	componentWillUnmount() {}
@@ -116,7 +159,7 @@ class Room extends PureComponent {
 	// 	return false;
 	// }
 
-	handleSubmitUsername() {
+	handleSubmitUsername = () => {
 		if (this.state.username === "") {
 			alert("username can't be empty");
 			return;
@@ -128,26 +171,46 @@ class Room extends PureComponent {
 			(data) => {
 				if (data.success) {
 					this.setState({ openUsernameDialog: false });
+					localforage.setItem("dj:roomInfo", {
+						roomName: this.roomName,
+						username: this.state.username,
+					});
 				} else {
 					alert(data.reason);
 				}
 			},
 		);
-	}
+	};
 
-	handleText(event) {
+	handleText = (event) => {
 		this.setState({ username: event.target.value });
-	}
+	};
 
-	handleCreatePlaylist() {
-		this.socket.emit("createPlaylist", null, (data) => {
-			if (!data.success) {
-				console.log(data.reason);
+	handleLogin = () => {
+		if (this.state.username === "") {
+			alert("something went wrong!");
+			window.location.reload();
+			return;
+		}
+		localforage
+			.setItem("dj:roomInfo", { roomName: this.roomName, username: this.state.username })
+			.then(() => {
+				window.location.href =
+					"https://accounts.spotify.com/authorize?response_type=code&client_id=501dbd9176ef4ef9af88bfedf7cb7e5a&scope=playlist-modify-private%20user-read-private%20user-read-email%20playlist-read-collaborative%20user-modify-playback-state%20playlist-modify-public%20playlist-read-private&redirect_uri=https%3A%2F%2Ffosse.co%2Fcallback";
+			});
+	};
+
+	handleLogout = () => {};
+
+	handleCreatePlaylist = () => {
+		this.socket.emit("createPlaylist", { code: this.state.code }, (data) => {
+			if (data.success) {
+				alert("playlist created on your spotify account!");
 			} else {
-				console.log(data.playlist);
+				console.log(data.reason);
 			}
 		});
-	}
+	};
 
 	render() {
 		console.log("rendering dj-room.");
@@ -172,14 +235,27 @@ class Room extends PureComponent {
 						type="songs"
 					/>
 				)}
-				<Button
-					className={classes.exportButton}
-					onClick={this.handleCreatePlaylist}
-					color="primary"
-					variant="contained"
-				>
-					Export to Spotify
-				</Button>
+
+				{!this.state.loggedIn ? (
+					<Button
+						className={classes.exportButton}
+						onClick={this.handleLogin}
+						color="primary"
+						variant="contained"
+					>
+						Login to Spotify
+					</Button>
+				) : (
+					<Button
+						className={classes.exportButton}
+						onClick={this.handleCreatePlaylist}
+						color="primary"
+						variant="contained"
+					>
+						Export to Spotify
+					</Button>
+				)}
+
 				<Dialog
 					open={this.state.openUsernameDialog}
 					onClose={() => {}}

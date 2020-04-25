@@ -3,7 +3,6 @@ const path = require("path");
 module.exports = {
 	entry: {
 		index: "./src/Index.jsx",
-		// streams: "./src/Streams.jsx",
 	},
 	output: {
 		// `filename` provides a template for naming your bundles (remember to use `[name]`)
@@ -55,6 +54,7 @@ module.exports = {
 			main: path.resolve(__dirname, "src/main/"),
 			party: path.resolve(__dirname, "src/party/"),
 			dj: path.resolve(__dirname, "src/dj/"),
+			email: path.resolve(__dirname, "src/email/"),
 			shared: path.resolve(__dirname, "src/shared"),
 		},
 	},

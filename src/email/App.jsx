@@ -11,8 +11,8 @@ import { connect } from "react-redux";
 
 // components:
 // main components:
-import Main from "./Main.jsx";
-import Room from "./Room.jsx";
+// import Main from "./Main.jsx";
+// import Room from "./Room.jsx";
 
 // material ui:
 import { withStyles } from "@material-ui/core/styles";
@@ -40,7 +40,7 @@ const styles = {
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.socket = null;
+		this.serverConnection = null;
 
 		this.state = {
 			roomName: "",
@@ -49,11 +49,12 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		if (this.socket) {
-			this.socket.close();
-			this.socket = null;
+		if (this.serverConnection) {
+			this.serverConnection.close();
+			this.serverConnection = null;
 		}
-		this.socket = this.props.serverConnection;
+
+		this.serverConnection = this.props.serverConnection;
 
 		// // listen to events and dispatch actions:
 		// handleStreamEvents(this.socket, this.props.store.dispatch);
@@ -71,29 +72,29 @@ class App extends Component {
 	// 	return false;
 	// }
 
-	handleJoin = () => {
-		this.props.history.push(`/party/${this.state.roomName}`);
-	};
+	// handleJoin = () => {
+	// 	this.props.history.push(`/party/${this.state.roomName}`);
+	// };
 
-	handleCreate = () => {
-		this.socket.emit("createRoom", null, (data) => {
-			if (data.success) {
-				this.setState({ open: true, roomName: data.roomName });
-			} else {
-				alert(data.reason);
-			}
-		});
-	};
+	// handleCreate = () => {
+	// 	this.socket.emit("createRoom", null, (data) => {
+	// 		if (data.success) {
+	// 			this.setState({ open: true, roomName: data.roomName });
+	// 		} else {
+	// 			alert(data.reason);
+	// 		}
+	// 	});
+	// };
 
-	handleClose = () => {
-		this.props.history.push(`/party/${this.state.roomName}`);
-		this.setState({ open: false });
-	};
+	// handleClose = () => {
+	// 	this.props.history.push(`/party/${this.state.roomName}`);
+	// 	this.setState({ open: false });
+	// };
 
-	handleText = (event) => {
-		// console.log(event.target.value);
-		this.setState({ roomName: event.target.value });
-	};
+	// handleText = (event) => {
+	// 	// console.log(event.target.value);
+	// 	this.setState({ roomName: event.target.value });
+	// };
 
 	render() {
 		console.log("re-rendering app.");
@@ -103,7 +104,7 @@ class App extends Component {
 		return (
 			<div className={classes.root}>
 				<Switch>
-					<Route
+					{/* <Route
 						path="/party/:roomName"
 						render={(props) => {
 							return (
@@ -128,7 +129,7 @@ class App extends Component {
 								/>
 							);
 						}}
-					/>
+					/> */}
 				</Switch>
 			</div>
 		);

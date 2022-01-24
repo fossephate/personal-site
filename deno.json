@@ -2,13 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "target": "esnext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "dom.asynciterable",
-      "deno.ns",
-      "deno.unstable"
-    ],
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns", "deno.unstable"],
     "jsx": "react"
   },
   "lint": {},

@@ -8,12 +8,7 @@ export default function () {
   const [colorTheme, setTheme] = useDarkMode();
 
   let darkIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -24,12 +19,7 @@ export default function () {
   );
 
   let lightIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -51,19 +41,13 @@ export default function () {
     let translationAmount = 1;
 
     if (isDark) {
-      switchToggle.classList.remove(
-        "bg-yellow-500",
-        `-translate-x-${translationAmount}`
-      );
+      switchToggle.classList.remove("bg-yellow-500", `-translate-x-${translationAmount}`);
       switchToggle.classList.add("bg-gray-700", "translate-x-full");
       setTimeout(() => {
         switchToggle.innerHTML = renderToStaticMarkup(darkIcon);
       }, 250);
     } else {
-      switchToggle.classList.add(
-        "bg-yellow-500",
-        `-translate-x-${translationAmount}`
-      );
+      switchToggle.classList.add("bg-yellow-500", `-translate-x-${translationAmount}`);
       switchToggle.classList.remove("bg-gray-700", "translate-x-full");
       setTimeout(() => {
         switchToggle.innerHTML = renderToStaticMarkup(lightIcon);
@@ -97,22 +81,13 @@ export default function () {
       </button>
 
       <div className="dark:text-white text-gray-500 flex gap-x-2">
-        <a
-          href="/about"
-          className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200"
-        >
+        <a href="/about" className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200">
           About
         </a>
-        <a
-          href="/projects"
-          className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200"
-        >
+        <a href="/projects" className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200">
           Projects
         </a>
-        <a
-          href="/tools"
-          className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200"
-        >
+        <a href="/tools" className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200">
           Tools
         </a>
       </div>

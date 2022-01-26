@@ -2,47 +2,31 @@ import React from "react";
 
 import ProjectCard from "~/common/components/ProjectCard.tsx";
 
-
-export default function() {
+export default function () {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-      
-      <div className="bg-gray-100 rounded-lg">
-        <div className="rounded-t-md bg-gray-300">
-          <a href="https://remotegames.io/s/fosse5">
-            <img
-              src="/assets/remotegames.png"
-              className="rounded-t-md mx-auto max-h-44"
-            />
-          </a>
-        </div>
-        <div className="p-4 space-y-2">
-          <a href="https://remotegames.io/s/fosse5" className="hover:underline decoration-black">
-            <h2 className="text-lg font-bold text-gray-600">Remote Games</h2>
-          </a>
-          <p className="text-sm text-gray-600">
-            Try it with WASD + Arrow keys! It's like google's stadia mashed with
-            the defunct rabb.it service, because how else was I going to play
-            switch games on my laptop in class?
-          </p>
-        </div>
-      </div>
+      <ProjectCard
+        link="https://remotegames.io/s/fosse5"
+        imageSrc="/assets/remotegames.png"
+        title="Remote Games"
+        description="Try it with WASD + Arrow keys! It's like google's stadia mashed with\
+        the defunct rabb.it service, because how else was I going to play\
+        switch games on my laptop in class?"
+      />
 
-      <div className="bg-gray-100 rounded-lg">
-        <div className="rounded-t-md bg-[#303030]">
-          <a href="https://dj.fosse.co">
-            <img src="/assets/dj.png" className="rounded-md mx-auto max-h-44" />
-          </a>
-        </div>
-        <div className="p-4 space-y-2">
-          <a href="https://dj.fosse.co" className="hover:underline decoration-black">
-            <h2 className="text-lg font-bold text-gray-600">Democratic DJ</h2>
-          </a>
-          <p className="text-sm text-gray-600">
-            A webapp to create the most fire 🔥 playlist for your next party
-          </p>
-        </div>
-      </div>
+      <ProjectCard
+        link="https://fosse.co/dj/"
+        imageSrc="/assets/dj.png"
+        title="Democratic DJ"
+        description="A webapp to create the most fire 🔥 playlist for your next party"
+      />
+
+      {/* <ProjectCard
+        link="https://github.com/fwd/nautilus"
+        imageSrc="https://raw.githubusercontent.com/fwd/nautilus/master/assets/logo-square.png"
+        title="Nautilus Wallet"
+        description="A Nano wallet for iOS and Android packed with features and nano.to integration"
+      /> */}
 
       <div className="bg-gray-100 rounded-lg">
         <div className="rounded-t-md bg-black">
@@ -58,34 +42,17 @@ export default function() {
             <h2 className="text-lg font-bold text-gray-600">Nautilus</h2>
           </a>
           <p className="text-sm text-gray-600">
-            A Nano wallet for iOS and Android packed with features and nano.to
-            integration
+            A Nano wallet for iOS and Android packed with features and nano.to integration
           </p>
         </div>
       </div>
 
-      <div className="bg-gray-100 rounded-lg">
-        <div className="rounded-t-md bg-gray-300">
-          <a href="https://github.com/fossephate/JoyCon-Driver">
-            <img
-              src="https://i.imgur.com/ihK9WNf.png"
-              className="mx-auto max-h-44"
-            />
-          </a>
-        </div>
-        <div className="p-4 space-y-2">
-          <a
-            href="https://github.com/fossephate/JoyCon-Driver"
-            className="hover:underline decoration-black"
-          >
-            <h2 className="text-lg font-bold text-gray-600">JoyCon-Driver</h2>
-          </a>
-          <p className="text-sm text-gray-600">
-            It lets you use your Nintendo Switch's Joy-Cons on your PC! The
-            first of it's kind and I did a lot of the RE that made it possible
-          </p>
-        </div>
-      </div>
+      <ProjectCard
+        link="https://github.com/fossephate/JoyCon-Driver"
+        imageSrc="https://i.imgur.com/ihK9WNf.png"
+        title="JoyCon-Driver"
+        description="It lets you use your Nintendo Switch's Joy-Cons on your PC! The first of its kind and I did a lot of the RE that made it possible"
+      />
 
       {/* <div className="bg-gray-100 rounded-lg">
         <div className="rounded-t-md bg-gray-300">

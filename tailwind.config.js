@@ -10,4 +10,5 @@ module.exports = {
       backgroundColor: ["active"],
     },
   },
+  // plugins: [require("tw-elements/dist/plugin")],
 };

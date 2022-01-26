@@ -7,7 +7,7 @@ export default function (props) {
     <div className="bg-gray-100 rounded-lg">
       <div className="rounded-t-md bg-gray-300">
         <a href={props.link}>
-          <img src={props.imageSrc} className="rounded-t-md mx-auto max-h-44" />
+          <img src={props.imageSrc} className="rounded-t-md rounded-b-sm mx-auto max-h-44" />
         </a>
       </div>
       <div className="p-4 space-y-2">

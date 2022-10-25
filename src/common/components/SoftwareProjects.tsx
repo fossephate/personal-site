@@ -35,7 +35,7 @@ export default function () {
 
       <div className="bg-gray-100 rounded-lg">
         <div className="rounded-t-md bg-black">
-          <a href="https://nautiluswallet.app">
+          <a href="https://nautilus.io">
             <img
               src="https://raw.githubusercontent.com/perishllc/nautilus/main/ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png"
               className="rounded-md mx-auto max-h-44"

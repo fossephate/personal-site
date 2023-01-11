@@ -5,7 +5,7 @@ export default function (props: any) {
   const [count, setCount] = useState(0);
   
   return (
-    <div className="bg-gray-100 rounded-lg">
+    <div className="dark:bg-gray-100 bg-gray-300 rounded-lg">
       <div className="rounded-t-md bg-gray-300">
         <div
           id={`${props.title.replace(/[\s!]/g, "")}`}
@@ -65,7 +65,7 @@ export default function (props: any) {
         {/* </a> */}
       </div>
       <div className="p-4 space-y-2">
-        <a href="#" className="hover:underline decoration-black">
+        <a href={props.link ?? "#"} className="hover:underline decoration-black">
           <h2 className="text-lg font-bold text-gray-600">{props.title}</h2>
         </a>
         <p className="text-sm text-gray-600">{props.description}</p>

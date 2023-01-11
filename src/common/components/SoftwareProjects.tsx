@@ -3,20 +3,23 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 
 import djImage from "../../assets/dj.png";
-import remoteGamesImage from "../../assets/remotegames.png";
+// import remoteGamesImage from "../../assets/remotegames.png";
+import ProjectCardCarousel from "./ProjectCardCarousel";
 
 
 
 export default function () {
   return (
     <div className="grid <sm:grid-cols-1 sm:grid-cols-3 gap-4">
-      <ProjectCard
+
+      <ProjectCardCarousel
         link="https://remotegames.io/s/fosse5"
-        imageSrc={remoteGamesImage}
+        imageList={[
+          "/assets/remotegames.png",
+          "/assets/rgio/rgio2.jpg",
+        ]}
         title="Remote Games"
-        description="Try it with WASD + Arrow keys! It's like google's stadia mashed with\
-        the defunct rabb.it service, because how else was I going to play\
-        switch games on my laptop in class?"
+        description="Try it with WASD + Arrow keys! A live streamed, real nintendo switch with controls!"
       />
 
       <ProjectCard
@@ -33,7 +36,7 @@ export default function () {
         description="A Nano wallet for iOS and Android packed with features and nano.to integration"
       /> */}
 
-      <div className="bg-gray-100 rounded-lg">
+      <div className="dark:bg-gray-100 bg-gray-300 rounded-lg">
         <div className="rounded-t-md bg-black">
           <a href="https://nautilus.io">
             <img
@@ -56,7 +59,7 @@ export default function () {
         link="https://github.com/fossephate/JoyCon-Driver"
         imageSrc="https://i.imgur.com/ihK9WNf.png"
         title="JoyCon-Driver"
-        description="It lets you use your Nintendo Switch's Joy-Cons on your PC! The first of its kind and I did a lot of the RE that made it possible"
+        description="It lets you use your Nintendo Switch's Joy-Cons on your PC! The first of its kind and I pioneered a lot of the reverse engineering that made the project possible"
       />
 
       {/* <div className="bg-gray-100 rounded-lg">

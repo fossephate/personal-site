@@ -4,7 +4,10 @@ import SoftwareProjects from "/src/common/components/SoftwareProjects";
 import HardwareProjects from "/src/common/components/HardwareProjects";
 import Footer from "/src/common/components/Footer";
 
-import profileSquare from "/src/assets/profile-square.png";
+// import profileSquare from "/src/assets/profile-square.png";
+// import profileSquare from "/src/assets/profile-vinny-transparent.png";
+import profileSquare from "/src/assets/profile-vinny-bg.png";
+
 
 export { Page };
 
@@ -29,7 +32,7 @@ function Page() {
               I'm <span className="whitespace-nowrap">Matthew Fosse</span>
             </h1>
             <p className="dark:text-gray-400 text-gray-600 <sm:text-center sm:text-left">
-              Software Engineer and Vulnerability Researcher from Florida
+              Software Engineer and Hardware Hacker from Florida
             </p>
             <div className="flex <sm:flex-col sm:flex-row gap-4">
               <a href="mailto:fossephate@gmail.com">

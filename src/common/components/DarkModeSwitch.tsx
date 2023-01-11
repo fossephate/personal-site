@@ -83,7 +83,7 @@ export default function () {
 
   return (
     <button
-      className="ml-auto mr-4 w-12 h-6 rounded-full bg-white flex items-center focus:outline-none shadow"
+      className="ml-auto mr-4 w-12 h-6 rounded-full bg-gray-200 flex items-center focus:outline-none shadow"
       onClick={toggleTheme}
     >
       <div

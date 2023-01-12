@@ -21,7 +21,7 @@ function Page() {
           <div className="dark:text-white max-w-4xl py-8 text-gray-600 space-y-6">
 
             <h1 className="text-3xl font-bold text-center pb-12">
-              Hi 👋, thanks for stoping by, here's a little bit about me.
+              Hi 👋, thanks for stopping by, here's a little bit about me.
             </h1>
 
 
@@ -44,7 +44,7 @@ function Page() {
                 </p>
                 <p>
                   If you have any questions or are interested in working with me, please feel free to reach out to me at
-                  <a href="mailto:fossephate@gmail.com">fossephate@gmail.com</a>
+                  <a href="mailto:matt@fosse.co">matt@fosse.co</a>
                 </p>
               </div>
             </div>

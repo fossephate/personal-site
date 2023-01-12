@@ -86,7 +86,7 @@ export default function HardwareList() {
           "/assets/timer/timer2.gif",
         ]}
         title="The Everyday Timer!"
-        description="A simple digital hour glass that resets once a day. Useful for remembering to do dayly chores like feeding my cat"
+        description="A simple digital hour glass that resets once a day. Useful for remembering to do daily chores like feeding my cat"
       />
 
       <ProjectCard

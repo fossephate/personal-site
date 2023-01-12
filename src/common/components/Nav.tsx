@@ -21,9 +21,9 @@ export default function () {
         <a href="/projects" className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200">
           Projects
         </a>
-        <a href="/tools" className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200">
+        {/* <a href="/tools" className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200">
           Tools
-        </a>
+        </a> */}
       </div>
     </nav>
   );

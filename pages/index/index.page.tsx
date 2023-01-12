@@ -18,7 +18,7 @@ function Page() {
         <div className="font-mono">
           <Nav />
         </div>
-        <main className="my-12 font-mono w-full dark:bg-gray-900 bg-gray-100 rounded-lg p-12 flex justify-between items-center <sm:flex-col sm:flex-row">
+        <main className="my-12 font-mono w-full dark:bg-gray-900 bg-gray-200 rounded-lg p-12 flex justify-between items-center <sm:flex-col sm:flex-row">
           <div className="<sm:w-full sm:w-1/2 space-y-4">
             <div className="<sm:block sm:hidden w-full">
               <img
@@ -32,12 +32,12 @@ function Page() {
               I'm <span className="whitespace-nowrap">Matthew Fosse</span>
             </h1>
             <p className="dark:text-gray-400 text-gray-600 <sm:text-center sm:text-left">
-              23 Year Old Software Engineer and Hardware Hacker from Florida
+              23 Year Old Software Engineer<br/> and Hardware Hacker from Florida
             </p>
             <div className="flex <sm:flex-col sm:flex-row gap-4">
-              <a href="mailto:fossephate@gmail.com">
+              <a href="mailto:matt@fosse.co">
                 <button
-                  className="dark:hover:text-gray-300 hover:text-gray-300 w-full border-2 !border-[#9736f4] !bg-[#9736f4] rounded-md text-white px-4 py-2 whitespace-nowrap"
+                  className="!bg-[#9736f4] hover:text- w-full border-2 !border-[#9736f4] rounded-md text-white px-4 py-2 whitespace-nowrap"
                   type="button"
                 >
                   Contact me
@@ -45,7 +45,7 @@ function Page() {
               </a>
               <a href="/about">
                 <button
-                  className="dark:hover:text-gray-300 hover:text-gray-300 w-full border-2 !border-[#9736F4] rounded-md dark:text-white text-gray-700 px-4 py-2 whitespace-nowrap"
+                  className="w-full border-2 !border-[#9736F4] rounded-md dark:text-white text-gray-700 px-4 py-2 whitespace-nowrap"
                   type="button"
                 >
                   Learn more
@@ -83,11 +83,11 @@ function Page() {
                 Projects
               </button>
             </a>
-            <a href="/tools" className="w-full">
+            {/* <a href="/tools" className="w-full">
               <button className="dark:bg-gray-600 dark:hover:bg-[#9736F4] transition-colors duration-100 ease-in-out bg-gray-200 hover:bg-[#9736F4] hover:text-white rounded-md w-full px-4 py-2">
                 Tools
               </button>
-            </a>
+            </a> */}
             {/* <a href="/hardware" target="_blank" className="w-full">
             <button className="dark:bg-gray-600 dark:hover:bg-[#9736F4] transition-colors duration-100 ease-in-out bg-gray-200 hover:bg-[#9736F4] hover:text-white rounded-md w-full px-4 py-2">
               Hardware

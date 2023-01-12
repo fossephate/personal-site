@@ -18,12 +18,6 @@ function Page() {
           </div>
 
           <div className="my-12 py-2 flex flex-col items-center w-full justify-center dark:bg-gray-900 bg-gray-100 rounded-lg">
-            <a href="/">
-              <img
-                src="/assets/profile-square.png"
-                className="bg-gradient-to-r p-[5px] from-[#7928ca] to-[#ff0080] rounded-full <sm:w-28 sm:w-40 hover:opacity-90"
-              />
-            </a>
             <div className="text-center py-8">
               <h1 className="<sm:text-3xl sm:text-4xl font-bold dark:text-gray-100 pb-4">Dev Tools</h1>
               <p className="dark:text-gray-50 <sm:text-md sm:text-lg max-w-xl">

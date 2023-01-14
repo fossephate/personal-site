@@ -38,11 +38,13 @@ export default function () {
   }
 
   useEffect(() => {
-    let isDark = window.document.documentElement.classList.contains("dark");
-    // setTimeout(() => {
-    //   document.querySelector("#switch-toggle").classList.add("transition", "duration-500");
-    // }, 500);
-    updateSwitch(isDark, true);
+    setTimeout(() => {
+      let isDark = window.document.documentElement.classList.contains("dark");
+      // setTimeout(() => {
+      //   document.querySelector("#switch-toggle").classList.add("transition", "duration-500");
+      // }, 500);
+      updateSwitch(isDark, true);
+    }, 500);
   }, []);
 
   function updateSwitch(isDark: any, fast = false) {

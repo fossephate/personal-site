@@ -6,7 +6,7 @@ import Footer from "/src/common/components/Footer";
 
 // import profileSquare from "/src/assets/profile-square.png";
 // import profileSquare from "/src/assets/profile-vinny-transparent.png";
-import profileSquare from "/src/assets/profile-vinny-bg.png";
+import profileSquare from "/src/assets/profile-vinny-bg2.png";
 
 
 export { Page };

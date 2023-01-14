@@ -5,7 +5,7 @@ import DarkModeSwitch from "./DarkModeSwitch";
 export default function () {
 
   return (
-    <nav className="flex <sm:flex-col sm:flex-row justify-between items-center">
+    <nav className="flex <sm:flex-col sm:flex-row justify-between items-center font-mono">
       <div>
         <a href="/" className="dark:text-white font-bold text-gray-600 text-lg">
           // Matthew Fosse

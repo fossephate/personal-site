@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from "../../src/common/components/Nav";
 import Footer from "../../src/common/components/Footer";
 
-import profileImage from '../../src/assets/profile-vinny-bg.png';
+import profileImage from '../../src/assets/profile-vinny-bg2.png';
 
 export { Page };
 

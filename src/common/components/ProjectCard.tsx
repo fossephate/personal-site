@@ -2,7 +2,7 @@ import React from "react";
 
 export default function (props: any) {
   return (
-    <div className="dark:bg-gray-100 bg-gray-300 rounded-lg">
+    <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
       <div className="rounded-t-md bg-gray-300">
         <a href={props.link}>
           <img src={props.imageSrc} className="rounded-t-md rounded-b-sm mx-auto max-h-44" />

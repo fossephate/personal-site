@@ -5,7 +5,7 @@ export default function (props: any) {
   const [count, setCount] = useState(0);
   
   return (
-    <div className="dark:bg-gray-100 bg-gray-300 rounded-lg">
+    <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
       <div className="rounded-t-md bg-gray-300">
         <div
           id={`${props.title.replace(/[\s!]/g, "")}`}

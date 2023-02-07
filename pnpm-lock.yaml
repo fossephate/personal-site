@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@cycjimmy/jsmpeg-player': ^6.0.5
   '@types/compression': ^1.7.2
   '@types/express': ^4.17.14
   '@types/node': ^17.0.45
@@ -23,6 +24,7 @@ specifiers:
   windicss: ^3.5.6
 
 dependencies:
+  '@cycjimmy/jsmpeg-player': 6.0.5
   '@types/compression': 1.7.2
   '@types/express': 4.17.14
   '@types/node': 17.0.45
@@ -332,6 +334,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
+    dev: false
+
+  /@cycjimmy/jsmpeg-player/6.0.5:
+    resolution: {integrity: sha512-bVNHQ7VN9ecKT5AI/6RC7zpW/y4ca68a9txeR5Wiin+jKpUn/7buMe+5NPub89A8NNeNnKPQfrD2+c76ch36mA==}
     dev: false
 
   /@esbuild/linux-loong64/0.15.7:

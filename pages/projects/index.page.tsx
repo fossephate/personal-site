@@ -2,7 +2,6 @@ import React from "react";
 import Nav from "../../src/common/components/Nav";
 import SoftwareProjects from "../../src/common/components/SoftwareProjects";
 import HardwareProjects from "../../src/common/components/HardwareProjects";
-import profileSquare from "/src/assets/profile-vinny-bg.png";
 
 
 export { Page };
@@ -24,7 +23,7 @@ function Page() {
             <Nav />
           </div> */}
           {/* <section className="w-full max-w-5xl mx-auto px-2 sm:px-6 py-4"> */}
-          <div className="my-12 py-2 flex flex-col items-center w-full justify-center dark:bg-gray-900 bg-gray-100 rounded-lg">
+          <div className="my-12 py-2 flex flex-col items-center w-full justify-center dark:bg-gray-900 bg-gray-200 rounded-lg">
             {/* <a href="/">
               <img
                 src={profileSquare}

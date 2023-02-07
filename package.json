@@ -10,6 +10,7 @@
     "server:prod": "cross-env NODE_ENV=production PORT=4000 node ./server"
   },
   "dependencies": {
+    "@cycjimmy/jsmpeg-player": "^6.0.5",
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.14",
     "@types/node": "^17.0.45",

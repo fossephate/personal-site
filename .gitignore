@@ -120,4 +120,5 @@ yarn.lock
 
 
 # video:
-projects/tesla-poc/video/*.ts
+public/assets/video/*
+pages/tesla

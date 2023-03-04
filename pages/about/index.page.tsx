@@ -43,7 +43,7 @@ function Page() {
                   You can find most of my projects either here on my website, or on my github <a className="font-medium" href="https://github.com/fossephate">https://github.com/fossephate</a>
                 </p>
                 <p>
-                  If you have any questions or are interested in working with me, please feel free to reach out to me at
+                  If you have any questions or are interested in working with me, please feel free to reach out to me at&nbsp;
                   <a href="mailto:matt@fosse.co">matt@fosse.co</a>
                 </p>
               </div>
@@ -164,7 +164,7 @@ function Page() {
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
                     <span>
-                      <span>AA Computer Science </span>
+                      <span>AS Computer Science </span>
                       <span className="text-sm font-normal italic">University of Central Florida, Orlando</span>
                     </span>
                     <span>Completed 2021</span>

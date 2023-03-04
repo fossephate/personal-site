@@ -28,6 +28,6 @@ export default defineConfig({
     },
     extend: {},
   },
-  plugins: [formsPlugin, typography],
+  plugins: [formsPlugin, typography, require("tw-elements/dist/plugin"), require('flowbite/plugin')],
   safelist: 'sm md lg xl 2xl',
 })

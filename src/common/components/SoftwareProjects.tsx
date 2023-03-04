@@ -40,7 +40,7 @@ export default function () {
         link="https://nautilus.io"
         imageSrc="https://raw.githubusercontent.com/perishllc/nautilus/main/ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png"
         title="Nautilus Wallet"
-        description="A Cryptocurrency Wallet for NANO, with some of the most advanced features of any wallet there. Available on both iOS and Android and developed with flutter"
+        description="A Cryptocurrency Wallet for NANO, with some of the most advanced features of any wallet out there. Available on both iOS and Android and developed with flutter"
       />
 
       <ProjectCard
@@ -51,6 +51,30 @@ export default function () {
       />
 
       <ProjectCard
+        link="https://github.com/fossephate/switch-controller"
+        imageSrc="https://i.imgur.com/tpXzxPR.jpg"
+        title="Switch-Controller"
+        description="Software + Hardware to control the Nintendo Switch by mimicking JoyCons"
+      />
+
+      <ProjectCard
+        link="https://github.com/fossephate/Vulkan-Engine"
+        imageSrc="/assets/projects/vulkan.png"
+        title="Vulkan-Engine"
+        description="A Vulkan Rendering Engine written in C++ with support for SSAO, Bullet3 physics, and more."
+      />
+
+
+      <ProjectCard
+        link="https://github.com/fossephate/AimBot"
+        imageSrc="/assets/projects/aimbot.png"
+        title="Overwatch Aimbot"
+        description="An aimbot for overwatch from when the game first came out (~2016)"
+      />
+
+
+
+      <ProjectCard
         link="/physics3"
         imageSrc="/assets/physics3.png"
         title="Physics3"
@@ -59,7 +83,7 @@ export default function () {
 
       <ProjectCard
         link="/8100/"
-        imageSrc="/assets/soccer-cars.png"
+        imageSrc="/assets/soccer-cars1.png"
         title="Soccer Cars 1"
         description="A silly rocket league clone from ~2014, mostly used to learn multiplayer networking techniques"
       />

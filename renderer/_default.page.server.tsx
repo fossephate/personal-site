@@ -43,6 +43,7 @@ async function render(pageContext: PageContextBuiltIn & PageContext) {
         />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
         <!--<script src="https://cdn.tailwindcss.com"></script>-->
     
         <script>
@@ -58,6 +59,7 @@ async function render(pageContext: PageContextBuiltIn & PageContext) {
       </head>
       <body>
         <div id="root">${dangerouslySkipEscape(pageHtml)}</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
       </body>
     </html>`
 

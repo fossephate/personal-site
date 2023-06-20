@@ -3,6 +3,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 
 import djImage from "../../assets/dj.png";
+import nautilusImage from "../../assets/nautilus-page.png";
 // import remoteGamesImage from "../../assets/remotegames.png";
 import ProjectCardCarousel from "./ProjectCardCarousel";
 
@@ -38,7 +39,8 @@ export default function () {
 
       <ProjectCard
         link="https://nautilus.io"
-        imageSrc="https://raw.githubusercontent.com/perishllc/nautilus/main/ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png"
+        // imageSrc="https://raw.githubusercontent.com/perishllc/nautilus/main/ios/Runner/Assets.xcassets/AppIcon.appiconset/AppIcon~ios-marketing.png"
+        imageSrc={nautilusImage}
         title="Nautilus Wallet"
         description="A Cryptocurrency Wallet for NANO, with some of the most advanced features of any wallet out there. Available on both iOS and Android and developed with flutter"
       />

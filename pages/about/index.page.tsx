@@ -9,7 +9,7 @@ export { Page };
 function Page() {
   return (
     <div className="page bg-white dark:bg-gray-800 dark:text-white overflow-y-auto min-h-screen">
-      <div className="w-full max-w-5xl mx-auto p-8">
+      <div className="w-full md:max-w-5xl mx-auto px-4 p-8">
         <Nav />
         <div className="grid place-items-center mt-12" style={{ cursor: "auto" }}>
           <div className="py-8">
@@ -152,7 +152,7 @@ function Page() {
               <tbody>
                 <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
                   <td className="px-4 py-2 text-lg font-medium">Languages</td>
-                  <td className="px-4 py-2">Rust, JavaScript/Typescript, Python3, C#, C/C++, Java, Lua, x86 + PowerPC Assembly</td>
+                  <td className="px-4 py-2">Rust, JavaScript/Typescript, Python2/3, Go, C#, C/C++, Java, Lua, x86 + PowerPC Assembly</td>
                 </tr>
                 <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
                   <td className="px-4 py-2 text-lg font-medium">Frameworks</td>
@@ -183,7 +183,6 @@ function Page() {
                       <span>AS Computer Science </span>
                       <span className="text-sm font-normal italic">University of Central Florida, Orlando</span>
                     </span>
-                    <span>Completed 2021</span>
                   </div>
                 </li>
               </ul>

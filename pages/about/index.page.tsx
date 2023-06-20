@@ -33,7 +33,7 @@ function Page() {
 
               <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2">
                 <p>
-                  Hi there, I'm Matthew Fosse, a 23 year old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
+                  Hi there, I'm Matthew Fosse, a 24 year old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                 </p>
 
                 <p>
@@ -103,15 +103,31 @@ function Page() {
             </div>
 
 
+
             <div className="space-y-2">
               <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1">
                 Work Experience
               </h1>
+
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8">
+                <li className="my-2">
+                  <div className="flex flex-row justify-between font-medium">
+                    <span className="">Software Engineer and Lead Architect</span>
+                    <span className="font-semibold">Perish Software Solutions (Feb 2022 - Present)</span>
+                  </div>
+                  <ul className="ml-4 list-inside list-disc">
+                    <li>Designed and built products for the cryptocurrency community</li>
+                    <li>Utilized the latest in cryptographic technologies to innovate new user experiences</li>
+                    <li>Worked to build decentralized and reliable product solutions that scale</li>
+                  </ul>
+                </li>
+              </ul>
+
               <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8">
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
                     <span className="">Software Engineer and Vulnerability Researcher</span>
-                    <span className="font-semibold">Raytheon Technologies (May 2019 - 2022)</span>
+                    <span className="font-semibold">Raytheon Technologies (May 2019 - Feb 2022)</span>
                   </div>
                   <ul className="ml-4 list-inside list-disc">
                     <li><b>Specifics are under NDA</b></li>
@@ -136,7 +152,7 @@ function Page() {
               <tbody>
                 <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
                   <td className="px-4 py-2 text-lg font-medium">Languages</td>
-                  <td className="px-4 py-2">Rust, JavaScript/Typescript, Python3, C/C++, Java, Lua, x86 + PowerPC Assembly</td>
+                  <td className="px-4 py-2">Rust, JavaScript/Typescript, Python3, C#, C/C++, Java, Lua, x86 + PowerPC Assembly</td>
                 </tr>
                 <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
                   <td className="px-4 py-2 text-lg font-medium">Frameworks</td>

@@ -32,7 +32,7 @@ function Page() {
               I'm <span className="whitespace-nowrap">Matthew Fosse</span>
             </h1>
             <p className="dark:text-gray-400 text-gray-600 <sm:text-center sm:text-left">
-              23 Year Old Software Engineer<br/> and Hardware Hacker from Florida
+              24 Year Old Software Engineer<br/> and Hardware Hacker from Florida
             </p>
             <div className="flex <sm:flex-col sm:flex-row gap-4">
               <a href="mailto:matt@fosse.co">

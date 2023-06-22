@@ -24,48 +24,49 @@ function Page() {
               Hi 👋, thanks for stopping by, here's a little bit about me.
             </h1>
 
-
-
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md text-lg">
+              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md sm:text-lg">
                 About Me
               </h1>
 
               <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
-                <p>
-                  Hi there, I'm Matthew Fosse, a 24 year old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
+                <p className="text-base sm:text-lg">
+                  Hi there, I'm Matthew Fosse, a 24-year-old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                 </p>
 
-                <p>
-                  I am also an avid maker and enjoy working on my own projects, ranging from custom drivers for gaming controllers, to advanced cryptocurrency wallets, to modded hardware like a 1TB Bluetooth iPod Classic. My skills include Software Development, Electrical Engineering, 3D printing (Fusion 360), Game Development, and more.
+                <p className="text-base sm:text-lg">
+                  I am also an avid maker and enjoy working on my own projects, ranging from custom drivers for gaming controllers to advanced cryptocurrency wallets to modded hardware like a 1TB Bluetooth iPod Classic. My skills include Software Development, Electrical Engineering, 3D printing (Fusion 360), Game Development, and more.
                 </p>
-                <p>
-                  You can find most of my projects either here on my website, or on my github <a className="font-medium" href="https://github.com/fossephate">https://github.com/fossephate</a>
+                <p className="text-base sm:text-lg">
+                  You can find most of my projects either here on my website or on my GitHub{" "}
+                  <a className="font-medium" href="https://github.com/fossephate">
+                    https://github.com/fossephate
+                  </a>
                 </p>
-                <p>
+                <p className="text-base sm:text-lg">
                   If you have any questions or are interested in working with me, please feel free to reach out to me at&nbsp;
                   <a href="mailto:matt@fosse.co">matt@fosse.co</a>
                 </p>
               </div>
             </div>
 
-
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md text-lg">
+              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md sm:text-lg">
                 Professional Projects
               </h1>
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 rounded-md">
-
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md">
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
                     <span>
                       <span>JoyCon-Driver </span>
                       <span className="text-sm font-normal italic">C/C++, Reverse Engineering</span>
                     </span>
-                    <a href="https://github.com/fossephate/JoyCon-Driver" target="_blank">github.com/fossephate/JoyCon-Driver</a>
+                    <a href="https://github.com/fossephate/JoyCon-Driver" target="_blank" className="hidden sm:block">
+                      github.com/fossephate/JoyCon-Driver
+                    </a>
                   </div>
-                  <ul className="ml-4 list-inside list-disc">
-                    <li>The first ever usermode driver for the Nintendo Switch JoyCons and Pro Controller</li>
+                  <ul className="ml-4 list-inside list-disc text-xs sm:text-base">
+                    <li>The first-ever usermode driver for the Nintendo Switch JoyCons and Pro Controller</li>
                     <li>Currently used by thousands to play PC games with JoyCons / Pro Controller</li>
                     <li>Contributed to the Reverse Engineering efforts that made the project possible</li>
                   </ul>
@@ -77,11 +78,13 @@ function Page() {
                       <a href="https://nautilus.io">Nautilus - Cryptocurrency Wallet </a>
                       <span className="text-sm font-normal italic">Flutter, Dart, Kubernetes, iOS, Android</span>
                     </span>
-                    <a href="https://nautilus.io" target="_blank">nautilus.io</a>
+                    <a href="https://nautilus.io" target="_blank" className="hidden sm:block">
+                      nautilus.io
+                    </a>
                   </div>
-                  <ul className="ml-4 list-inside list-disc">
-                    <li>One of the most advanced cryptocurrency wallets out there, with first class design and utility</li>
-                    <li>Availiable on the App and Google Play Store</li>
+                  <ul className="ml-4 list-inside list-disc text-xs sm:text-base">
+                    <li>One of the most advanced cryptocurrency wallets out there, with first-class design and utility</li>
+                    <li>Available on the App and Google Play Store</li>
                   </ul>
                 </li>
 
@@ -91,25 +94,24 @@ function Page() {
                       <span>Remote Games </span>
                       <span className="text-sm font-normal italic">React, Node.js, C++, Python</span>
                     </span>
-                    <a href="https://remotegames.io" target="_blank">remotegames.io</a>
+                    <a href="https://remotegames.io" target="_blank" className="hidden sm:block">
+                      remotegames.io
+                    </a>
                   </div>
-                  <ul className="ml-4 list-inside list-disc">
+                  <ul className="ml-4 list-inside list-disc text-xs sm:text-base">
                     <li>Developed software and hardware to share my Nintendo Switch with the internet</li>
                     <li>Full keyboard, mouse, and controller integration complete with mappable inputs</li>
                   </ul>
                 </li>
-
               </ul>
             </div>
 
-
-
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md text-lg">
+              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md text-md sm:text-lg">
                 Work Experience
               </h1>
 
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 rounded-md">
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md text-sm sm:text-base">
                 <li className="my-2">
                   <div className="flex flex-row justify-between">
                     <span className="">Software Engineer and Lead Architect</span>
@@ -123,14 +125,16 @@ function Page() {
                 </li>
               </ul>
 
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 rounded-md">
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md text-sm sm:text-base">
                 <li className="my-2">
                   <div className="flex flex-row justify-between">
                     <span className="">Software Engineer and Vulnerability Researcher</span>
                     <span className="font-semibold">Raytheon Technologies (May 2019 - Feb 2022)</span>
                   </div>
                   <ul className="ml-4 list-inside list-disc">
-                    <li><b>Specifics are under NDA</b></li>
+                    <li>
+                      <b>Specifics are under NDA</b>
+                    </li>
                     <li>Utilized 3 years of professional experience in software development and research</li>
                     <li>Analyzed hardware, software, and network applications with and without source code</li>
                     <li>Leveraged static and dynamic software analysis tools such as IDA Pro, Ghidra, and Binary Ninja</li>
@@ -142,27 +146,29 @@ function Page() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-5 gap-4 border-2 dark:border-gray-700 dark:bg-gray-800 rounded-md">
-              <div className="bg-gray-300 dark:bg-gray-700 px-4 py-2 col-span-5 text-lg font-semibold">Skills</div>
-              <div className="px-4 py-2 text-lg font-medium">Languages</div>
-              <div className="px-4 py-2 col-span-4">Rust, JavaScript/Typescript, Dart, Python2/3, Go, C#, C/C++, Java, Lua</div>
-              <div className="px-4 py-2 text-lg font-medium">Frameworks</div>
-              <div className="px-4 py-2 col-span-4">Node.js, React, Redux, Next.js, Tailwind CSS, PostgresSQL, Flutter</div>
-              <div className="px-4 py-2 text-lg font-medium">Tech</div>
-              <div className="px-4 py-2 col-span-4">Git, Docker, Kubernetes, Amazon AWS, Google Cloud, MongoDB, Server Administration, Fusion 360, Unity 3D</div>
+            <div className="grid grid-cols-7 gap-4 border-2 dark:border-gray-700 dark:bg-gray-800 rounded-md">
+              <div className="col-span-7 bg-gray-300 dark:bg-gray-700 px-4 py-2 font-semibold sm:text-lg">
+                Skills
+              </div>
+              <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Languages</div>
+              <div className="px-4 py-2 text-sm sm:text-base col-span-5">
+                Rust, JavaScript/Typescript, Dart, Python2/3, Go, C#, C/C++, Java, Lua
+              </div>
+              <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Frameworks</div>
+              <div className="px-4 py-2 text-sm sm:text-base col-span-5">
+                Node.js, React, Redux, Next.js, Tailwind CSS, PostgresSQL, Flutter
+              </div>
+              <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Tech</div>
+              <div className="px-4 py-2 text-sm sm:text-base col-span-5">
+                Git, Docker, Kubernetes, Amazon AWS, Google Cloud, MongoDB, Server Administration, Fusion 360, Unity 3D
+              </div>
               {/* <div className="px-4 py-2 text-lg font-medium">RE Tools</div>
-              <div className="px-4 py-2 col-span-4">IDA Pro, Ghidra (Both Reverse Engineering and Development), Binary Ninja</div> */}
+  <div className="px-4 py-2 col-span-4">IDA Pro, Ghidra (Both Reverse Engineering and Development), Binary Ninja</div> */}
             </div>
 
-
-
-
-
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1">
-                Education
-              </h1>
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8">
+              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 font-semibold sm:text-lg">Education</h1>
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 sm:text-base text-xs">
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
                     <span>
@@ -173,6 +179,7 @@ function Page() {
                 </li>
               </ul>
             </div>
+
 
           </div>
         </div>

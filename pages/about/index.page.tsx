@@ -18,7 +18,7 @@ function Page() {
               className="bg-gradient-to-r p-[7px] from-[#7928ca] to-[#ff0080] w-56 h-56 rounded-full object-cover"
             />
           </div>
-          <div className="dark:text-white max-w-4xl py-8 text-gray-600 space-y-6">
+          <div className="dark:text-white max-w-4xl py-8 text-gray-600 space-y-8">
 
             <h1 className="text-3xl font-bold text-center pb-12">
               Hi 👋, thanks for stopping by, here's a little bit about me.
@@ -54,6 +54,7 @@ function Page() {
               <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md sm:text-lg">
                 Professional Projects
               </h1>
+
               <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md">
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
@@ -71,7 +72,9 @@ function Page() {
                     <li>Contributed to the Reverse Engineering efforts that made the project possible</li>
                   </ul>
                 </li>
+              </ul>
 
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md">
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
                     <span>
@@ -87,7 +90,9 @@ function Page() {
                     <li>Available on the App and Google Play Store</li>
                   </ul>
                 </li>
+              </ul>
 
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md">
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
                     <span>
@@ -146,8 +151,8 @@ function Page() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-7 gap-4 border-2 dark:border-gray-700 dark:bg-gray-800 rounded-md">
-              <div className="col-span-7 bg-gray-300 dark:bg-gray-700 px-4 py-2 font-semibold sm:text-lg">
+            {/* <div className="grid grid-cols-7 gap-4 border-2 dark:border-gray-600 dark:bg-gray-800 rounded-md">
+              <div className="col-span-7 bg-gray-300 dark:bg-gray-600 px-4 py-2 font-semibold sm:text-lg">
                 Skills
               </div>
               <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Languages</div>
@@ -161,30 +166,55 @@ function Page() {
               <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Tech</div>
               <div className="px-4 py-2 text-sm sm:text-base col-span-5">
                 Git, Docker, Kubernetes, Amazon AWS, Google Cloud, MongoDB, Server Administration, Fusion 360, Unity 3D
-              </div>
-              {/* <div className="px-4 py-2 text-lg font-medium">RE Tools</div>
+              </div> */}
+            {/* <div className="px-4 py-2 text-lg font-medium">RE Tools</div>
   <div className="px-4 py-2 col-span-4">IDA Pro, Ghidra (Both Reverse Engineering and Development), Binary Ninja</div> */}
-            </div>
+            {/* </div> */}
 
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 font-semibold sm:text-lg">Education</h1>
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 sm:text-base text-xs">
-                <li className="my-2">
-                  <div className="flex flex-row justify-between font-medium">
-                    <span>
-                      <span>AS Computer Science </span>
-                      <span className="text-sm font-normal italic">University of Central Florida, Orlando</span>
-                    </span>
-                  </div>
-                </li>
-              </ul>
+
+              <div className="col-span-7 bg-gray-300 dark:bg-gray-600 px-4 py-2 font-semibold sm:text-lg rounded-md">
+                Skills
+              </div>
+              <div className="grid grid-cols-7 gap-4 border-2 dark:border-gray-600 dark:bg-gray-800 rounded-md">
+
+                <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Languages</div>
+                <div className="px-4 py-2 text-sm sm:text-base col-span-5">
+                  Rust, JavaScript/Typescript, Dart, Python2/3, Go, C#, C/C++, Java, Lua
+                </div>
+                <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Frameworks</div>
+                <div className="px-4 py-2 text-sm sm:text-base col-span-5">
+                  Node.js, React, Redux, Next.js, Tailwind CSS, PostgresSQL, Flutter
+                </div>
+                <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Tech</div>
+                <div className="px-4 py-2 text-sm sm:text-base col-span-5">
+                  Git, Docker, Kubernetes, Amazon AWS, Google Cloud, MongoDB, Server Administration, Fusion 360, Unity 3D
+                </div>
+
+
+              </div>
+
+              </div>
+
+              <div className="space-y-2">
+                <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 font-semibold sm:text-lg rounded-md">Education</h1>
+                <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 sm:text-base text-xs rounded-md">
+                  <li className="my-2">
+                    <div className="flex flex-row justify-between font-medium">
+                      <span>
+                        <span>AS Computer Science </span>
+                        <span className="text-sm font-normal italic">University of Central Florida, Orlando</span>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+
             </div>
-
-
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
-    </div>
-  );
+      );
 }

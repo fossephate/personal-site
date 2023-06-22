@@ -27,11 +27,11 @@ function Page() {
 
 
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1">
+              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md text-lg">
                 About Me
               </h1>
 
-              <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2">
+              <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
                 <p>
                   Hi there, I'm Matthew Fosse, a 24 year old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                 </p>
@@ -51,10 +51,10 @@ function Page() {
 
 
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1">
+              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md text-lg">
                 Professional Projects
               </h1>
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8">
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 rounded-md">
 
                 <li className="my-2">
                   <div className="flex flex-row justify-between font-medium">
@@ -105,13 +105,13 @@ function Page() {
 
 
             <div className="space-y-2">
-              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1">
+              <h1 className="bg-gray-300 dark:bg-gray-600 font-semibold px-4 py-1 rounded-md text-lg">
                 Work Experience
               </h1>
 
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8">
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 rounded-md">
                 <li className="my-2">
-                  <div className="flex flex-row justify-between font-medium">
+                  <div className="flex flex-row justify-between">
                     <span className="">Software Engineer and Lead Architect</span>
                     <span className="font-semibold">Perish Software Solutions (Feb 2022 - Present)</span>
                   </div>
@@ -123,9 +123,9 @@ function Page() {
                 </li>
               </ul>
 
-              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8">
+              <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 rounded-md">
                 <li className="my-2">
-                  <div className="flex flex-row justify-between font-medium">
+                  <div className="flex flex-row justify-between">
                     <span className="">Software Engineer and Vulnerability Researcher</span>
                     <span className="font-semibold">Raytheon Technologies (May 2019 - Feb 2022)</span>
                   </div>
@@ -142,34 +142,20 @@ function Page() {
               </ul>
             </div>
 
-            <table className="table-auto border-2 dark:border-gray-700 rounded-lg dark:bg-gray-800">
-              <thead>
-                <tr className="bg-gray-300 dark:bg-gray-700">
-                  <th className="px-4 py-2">Skills</th>
-                  <th className="px-4 py-2"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
-                  <td className="px-4 py-2 text-lg font-medium">Languages</td>
-                  <td className="px-4 py-2">Rust, JavaScript/Typescript, Python2/3, Go, C#, C/C++, Java, Lua, x86 + PowerPC Assembly</td>
-                </tr>
-                <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
-                  <td className="px-4 py-2 text-lg font-medium">Frameworks</td>
-                  <td className="px-4 py-2">
-                    Node.js, React, Redux, Next.js, Tailwind CSS, PostgresSQL
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
-                  <td className="px-4 py-2 text-lg font-medium">Tech</td>
-                  <td className="px-4 py-2">Git, Docker, Kubernetes, Amazon AWS, Google Cloud, MongoDB, Server Administration, Fusion 360, Unity 3D</td>
-                </tr>
-                <tr className="hover:bg-gray-100 dark:hover:bg-gray-800">
-                  <td className="px-4 py-2 text-lg font-medium">RE Tools</td>
-                  <td className="px-4 py-2">IDA Pro, Ghidra (Both Reverse Engineering and Development), Binary Ninja</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="grid grid-cols-5 gap-4 border-2 dark:border-gray-700 dark:bg-gray-800 rounded-md">
+              <div className="bg-gray-300 dark:bg-gray-700 px-4 py-2 col-span-5 text-lg font-semibold">Skills</div>
+              <div className="px-4 py-2 text-lg font-medium">Languages</div>
+              <div className="px-4 py-2 col-span-4">Rust, JavaScript/Typescript, Dart, Python2/3, Go, C#, C/C++, Java, Lua</div>
+              <div className="px-4 py-2 text-lg font-medium">Frameworks</div>
+              <div className="px-4 py-2 col-span-4">Node.js, React, Redux, Next.js, Tailwind CSS, PostgresSQL, Flutter</div>
+              <div className="px-4 py-2 text-lg font-medium">Tech</div>
+              <div className="px-4 py-2 col-span-4">Git, Docker, Kubernetes, Amazon AWS, Google Cloud, MongoDB, Server Administration, Fusion 360, Unity 3D</div>
+              {/* <div className="px-4 py-2 text-lg font-medium">RE Tools</div>
+              <div className="px-4 py-2 col-span-4">IDA Pro, Ghidra (Both Reverse Engineering and Development), Binary Ninja</div> */}
+            </div>
+
+
+
 
 
             <div className="space-y-2">

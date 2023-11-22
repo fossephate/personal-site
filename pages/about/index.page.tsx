@@ -73,7 +73,7 @@ function Page() {
                       github.com/fossephate/JoyCon-Driver
                     </a>
                   </div>
-                  <ul className="md:ml-4 list-inside list-none text-xs sm:text-base">
+                  <ul className="md:ml-4 list-inside list-none md:list-disc text-xs sm:text-base">
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">The first-ever usermode driver for the Nintendo Switch JoyCons and Pro Controller</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Currently used by thousands to play PC games with JoyCons / Pro Controller</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Contributed to the Reverse Engineering efforts that made the project possible</li>
@@ -92,7 +92,7 @@ function Page() {
                       nautilus.io
                     </a>
                   </div>
-                  <ul className="md:ml-4 list-inside list-none text-xs sm:text-base">
+                  <ul className="md:ml-4 list-inside list-none md:list-disc text-xs sm:text-base">
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Advanced cryptocurrency wallet, with first-class design and utility</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Available on the App and Google Play Store</li>
                   </ul>
@@ -110,7 +110,7 @@ function Page() {
                       remotegames.io
                     </a>
                   </div>
-                  <ul className="md:ml-4 list-inside list-none text-xs sm:text-base">
+                  <ul className="md:ml-4 list-inside list-none md:list-disc text-xs sm:text-base">
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Developed software and hardware to share my Nintendo Switch with the internet</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Full keyboard, mouse, and controller integration complete with mappable inputs</li>
                   </ul>
@@ -130,12 +130,12 @@ function Page() {
                     <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Flutter Developer</div>
                     <div className="bg-white dark:bg-gray-800 rounded-md px-2">Cake Labs</div>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-md px-2 text-xs md:text-sm h-fit mt-1">
+                  <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1">
                     June 2023 - Present
                   </div>
                 </div>
                 <li className="my-2">
-                  <ul className="md:ml-4 list-inside list-none">
+                  <ul className="md:ml-4 list-inside list-none md:list-disc">
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and built products for the cryptocurrency community</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Brought features to market in a timely manner</li>
                   </ul>
@@ -148,12 +148,12 @@ function Page() {
                     <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Software Engineer</div>
                     <div className="bg-white dark:bg-gray-800 rounded-md px-2">Perish Software Solutions</div>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-md px-2 text-xs md:text-sm h-fit mt-1">
+                  <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1">
                     Feb 2022 - June 2023
                   </div>
                 </div>
                 <li className="my-2">
-                  <ul className="md:ml-4 list-inside list-none">
+                  <ul className="md:ml-4 list-inside list-none md:list-disc">
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and built products for the cryptocurrency community</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Utilized the latest in cryptographic technologies to innovate new user experiences</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Worked to build decentralized and reliable product solutions that scale</li>
@@ -165,15 +165,15 @@ function Page() {
               <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
                 <div className="flex flex-row justify-between pt-2">
                   <div className="flex flex-col items-start space-y-1">
-                    <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Software Engineer and Vulnerability Researcher</div>
+                    <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2 w-max">Vulnerability Researcher</div>
                     <div className="bg-white dark:bg-gray-800 rounded-md px-2">Raytheon Technologies</div>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-md px-2 text-xs md:text-sm h-fit mt-1">
+                  <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1 ml-2">
                     May 2019 - Feb 2022
                   </div>
                 </div>
                 <li className="my-2">
-                  <ul className="md:ml-4 list-inside list-none">
+                  <ul className="md:ml-4 list-inside list-none md:list-disc">
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Utilized 3 years of professional experience in software development and research</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Analyzed hardware, software, and network applications with and without source code</li>
                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Leveraged static and dynamic software analysis tools such as IDA Pro, Ghidra, and Binary Ninja</li>
@@ -190,7 +190,7 @@ function Page() {
               <div className="col-span-7 bg-yellow-300 dark:bg-yellow-400 px-4 py-2 font-semibold sm:text-lg rounded-md">
                 Skills
               </div>
-              <div className="grid grid-cols-7 gap-4 p-2 dark:border-gray-600 dark:bg-gray-700 rounded-md">
+              <div className="grid grid-cols-7 gap-4 p-2 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 rounded-md">
                 <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Languages</div>
                 <div className="px-4 py-2 text-sm sm:text-base col-span-5 bg-white dark:bg-gray-800 rounded-md shadow">
                   Rust, JavaScript/Typescript, Dart, Python2/3, Go, C#, C/C++, Java, Lua

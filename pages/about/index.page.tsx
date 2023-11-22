@@ -20,7 +20,8 @@ function Page() {
               className="bg-gradient-to-r p-[7px] from-[#7928ca] to-[#ff0080] w-56 h-56 rounded-full object-cover"
             />
           </div>
-          <div className="dark:text-white text-black max-w-4xl py-8 text-gray-600 space-y-8">
+
+          <div className="dark:text-white text-black max-w-4xl py-8 space-y-8">
 
             <h1 className="text-3xl font-bold text-center pb-12">
               Hi 👋, thanks for stopping by, here's a bit about me.

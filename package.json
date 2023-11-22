@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@windicss/plugin-animations": "^1.0.9",
+    "sharp": "^0.32.6",
+    "vite-plugin-image-optimizer": "^1.1.7",
     "vite-plugin-windicss": "^1.8.8",
     "windicss": "^3.5.6"
   }

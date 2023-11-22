@@ -13,7 +13,7 @@ export default function () {
   return (
     <div className="grid <sm:grid-cols-1 sm:grid-cols-3 gap-4">
 
-      <ProjectCardCarousel
+      {/* <ProjectCardCarousel
         link="https://remotegames.io/s/fosse5"
         imageList={[
           "/assets/remotegames.png",
@@ -21,7 +21,7 @@ export default function () {
         ]}
         title="Remote Games"
         description="Try it with WASD + Arrow keys! A live streamed, real nintendo switch with controls!"
-      />
+      /> */}
 
       <ProjectCard
         link="https://fosse.co/dj/"

@@ -8,12 +8,12 @@ type ProjectCardProps={
   description: string;
 }
 
-export default function (props: ProjectCardProps) {
+export default function ProjectCard(props: ProjectCardProps) {
   return (
     <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
       <div className="rounded-t-md bg-gray-300">
         <a href={props.link}>
-          <Image src={props.imageSrc} width="auto" height="200" className="rounded-t-md rounded-b-sm mx-auto max-h-44" />
+          <Image src={props.imageSrc} height="200" className="rounded-t-md rounded-b-sm mx-auto max-h-44" alt="project image" />
         </a>
       </div>
       <div className="p-4 space-y-2">

@@ -4,28 +4,27 @@ import ProjectCard from "@/components/ProjectCard";
 import ProjectCardCarousel from "@/components/ProjectCardCarousel";
 
 import mainKeyboard from        "@/assets/images/hardware/keyboards/keyboards1.jpg";
-import keyboard1 from           "@/assets/images/alpha/DSC00161.JPG";
-import keyboard2 from           "@/assets/images/alpha/DSC00160.JPG";
-import keyboard3 from           "@/assets/images/alpha/DSC00164.JPG";
-import keyboard4 from           "@/assets/images/alpha/DSC00173.JPG";
-import keyboard5 from           "@/assets/images/alpha/DSC00178.JPG";
-import keyboard6 from           "@/assets/images/alpha/DSC00179.JPG";
-import keyboard7 from           "@/assets/images/alpha/DSC00180.JPG";
-import keyboard8 from           "@/assets/images/alpha/DSC00188.JPG";
-import carPic1 from             "@/assets/images/alpha/DSC00139.JPG";
-import carPic2 from             "@/assets/images/alpha/DSC00052.JPG";
-import carPic3 from             "@/assets/images/alpha/DSC00147.JPG";
-import carPic4 from             "@/assets/images/alpha/DSC00134.JPG";
 import ipodImage from "@/assets/images/hardware/ipod/ipod.png";
-import moddedIdog from "@/assets/images/alpha/DSC00045.JPG";
 import wirelessMouse from "@/assets/images/hardware/wireless-mouse.jpg";
 import miniPC from "@/assets/images/hardware/mini-pc.jpg";
 import spotifyCarThingImage from "@/assets/images/hardware/spotify-car-thing.webp";
 import n64Image from "@/assets/images/hardware/n64/n644.jpg";
+// import keyboard1 from           "@/assets/images/alpha/DSC00161.JPG";
+// import keyboard2 from           "@/assets/images/alpha/DSC00160.JPG";
+// import keyboard3 from           "@/assets/images/alpha/DSC00164.JPG";
+// import keyboard4 from           "@/assets/images/alpha/DSC00173.JPG";
+// import keyboard5 from           "@/assets/images/alpha/DSC00178.JPG";
+// import keyboard6 from           "@/assets/images/alpha/DSC00179.JPG";
+// import keyboard7 from           "@/assets/images/alpha/DSC00180.JPG";
+// import keyboard8 from           "@/assets/images/alpha/DSC00188.JPG";
+// import carPic1 from             "@/assets/images/alpha/DSC00139.JPG";
+// import carPic2 from             "@/assets/images/alpha/DSC00052.JPG";
+// import carPic3 from             "@/assets/images/alpha/DSC00147.JPG";
+// import carPic4 from             "@/assets/images/alpha/DSC00134.JPG";
+// import moddedIdog from "@/assets/images/alpha/DSC00045.JPG";
 
 
-
-export default function HardwareList() {
+export default function HardwareProjects() {
   return (
     <div className="grid <sm:grid-cols-1 sm:grid-cols-3 gap-4">
 

@@ -25,7 +25,7 @@ export default function Page() {
           <div className="dark:text-white text-black max-w-4xl py-8 space-y-8">
 
             <h1 className="text-3xl font-bold text-center pb-12">
-              Hi 👋, thanks for stopping by, here's a bit about me.
+              Hi 👋, thanks for stopping by, here&apos;s a bit about me.
             </h1>
 
             <div className="space-y-2">
@@ -35,7 +35,7 @@ export default function Page() {
 
               <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
                 <p className="text-base sm:text-lg">
-                  Hi there, I'm Matthew Fosse, a 24-year-old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
+                  Hi there, I&apos;m Matthew Fosse, a 24-year-old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                 </p>
 
                 <p className="text-base sm:text-lg">
@@ -54,7 +54,7 @@ export default function Page() {
               </div>
               <div className="py-2"></div>
               <blockquote className="p-4 my-4 bg-gray-200 rounded-md border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-800">
-                <p className="md:text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">"Fun fact: My work has made it into the ChatGPT training data set! If you ask ChatGPT about "Who wrote the JoyCon-Driver?" it'll tell you about me!"</p>
+                <p className="md:text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">&quot;Fun fact: My work has made it into the ChatGPT training data set! If you ask ChatGPT about &quot;Who wrote the JoyCon-Driver?&quot; it&apos;ll tell you about me!&quot;</p>
               </blockquote>
             </div>
 

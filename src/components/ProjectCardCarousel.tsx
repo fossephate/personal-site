@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 
-export default function (props: any) {
+export default function ProjectCardCarousel(props: any) {
   const [count, setCount] = useState(0);
 
   // return (

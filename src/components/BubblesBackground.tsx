@@ -1,10 +1,16 @@
 // components/BubblesBackground.js
+import { StaticImageData } from 'next/image';
+import React from 'react';
 import Bubble from './Bubble';
 
-const BubblesBackground = ({ imageUrls }) => {
+interface BubblesBackgroundProps {
+  imageUrls: StaticImageData[];
+}
+
+const BubblesBackground: React.FC<BubblesBackgroundProps> = ({ imageUrls }) => {
   return (
     <div>
-      {imageUrls.map((url, index) => (
+      {imageUrls.map((url: StaticImageData, index: number) => (
         <Bubble key={index} imageSrc={url} />
       ))}
       <style jsx global>{`

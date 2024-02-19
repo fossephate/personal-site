@@ -29,7 +29,7 @@ const Bubble = (props: BubbleProps) => {
     return () => clearInterval(interval);
   }, []);
 
-  return <div style={bubbleStyle}>
+  return <div style={bubbleStyle as any}>
     <Image src={props.imageSrc} alt={""} width="300" height="300" />
   </div>;
 };

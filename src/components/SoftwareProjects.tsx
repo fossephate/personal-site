@@ -16,7 +16,7 @@ import switchImage from "@/assets/images/software/switch-controller.jpg";
 
 
 
-export default function () {
+export default function SoftwareProjects() {
   return (
     <div className="grid <sm:grid-cols-1 sm:grid-cols-3 gap-4">
 

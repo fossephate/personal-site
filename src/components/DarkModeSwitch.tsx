@@ -14,7 +14,7 @@ const renderToString = async (element: React.ReactElement) => {
 import useDarkMode from "@/hooks/useDarkMode";
 import ReactDOM from "react-dom";
 
-export default function () {
+export default function DarkModeSwitch() {
   const [theme, setTheme] = useDarkMode();
 
   let darkIcon = (
@@ -54,7 +54,7 @@ export default function () {
       // }, 500);
       updateSwitch(isDark, true);
     }, 500);
-  }, []);
+  });
 
   function updateSwitch(isDark: any, fast = false) {
     const switchToggle = document.querySelector("#switch-toggle");

@@ -2,11 +2,70 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { useState } from "react";
-
+import styles from '@/components/ProjectCardCarousel.module.css';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import clsx from "clsx";
 
 
 export default function ProjectCardCarousel(props: any) {
   const [count, setCount] = useState(0);
+  const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()])
+
+
+  // return (
+  //   <div className={styles.embla} ref={emblaRef}>
+  //     <div className={styles.embla__container}>
+  //       <div className={styles.embla__slide}>Slide 1</div>
+  //       <div className={styles.embla__slide}>Slide 2</div>
+  //       <div className={styles.embla__slide}>Slide 3</div>
+  //     </div>
+  //   </div>
+  // );
+
+
+  return (
+    <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
+      <div className="rounded-t-md bg-gray-300">
+
+
+        <div ref={emblaRef} className={clsx("relative overflow-hidden rounded-lg h-48", styles.embla)}>
+          <div className={styles.embla__container}>
+            {/* <Image src={props.imageList[0].src} width={props.imageList[0].width} height={props.imageList[0].height} alt="..." /> */}
+            {/* <div className={styles.embla__slide}>Slide 1</div>
+            <div className={styles.embla__slide}>Slide 2</div>
+            <div className={styles.embla__slide}>Slide 3</div> */}
+            {/* {props.imageList.map((imageSrc: StaticImageData, index: any) => (
+              <div key={index} className={clsx(styles.embla__slide, "hidden duration-700 ease-in-out")} data-carousel-item="">
+                <Image src={props.imageList[index].src} width={props.imageList[index].width} height={props.imageList[index].height} className="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+              </div>
+            ))} */}
+            {props.imageList.map((imageSrc: StaticImageData, index: any) => (
+              <div key={index} className={clsx(styles.embla__slide, "duration-700 ease-in-out")} data-carousel-item="">
+                <Image src={props.imageList[index].src} width={props.imageList[index].width} height={props.imageList[index].height} className="block w-full h-full" alt="..." />
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* <div className="relative overflow-hidden rounded-lg h-48">
+            {props.imageList.map((imageSrc: StaticImageData, index: any) => (
+              <div key={index} className="hidden duration-700 ease-in-out" data-carousel-item="">
+                <Image src={props.imageList[index].src} width={props.imageList[index].width} height={props.imageList[index].height} className="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+              </div>
+            ))}
+          </div> */}
+
+
+
+      </div>
+      <div className="p-4 space-y-2">
+        <a href={props.link ?? "#"} className="hover:underline decoration-black">
+          <h2 className="text-lg font-bold text-gray-600">{props.title}</h2>
+        </a>
+        <p className="text-sm text-gray-600">{props.description}</p>
+      </div>
+    </div>
+  );
 
   // return (
   //   <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
@@ -78,51 +137,56 @@ export default function ProjectCardCarousel(props: any) {
   // );
 
 
-  return (
-    <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
-      <div className="rounded-t-md bg-gray-300">
+
+  // return (
+  //   <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
+  //     <div className="rounded-t-md bg-gray-300">
 
 
-        <div id="default-carousel" className="relative" data-carousel="static">
-          { /* Carousel wrapper */}
-          <div className="relative overflow-hidden rounded-lg h-48">
-            {props.imageList.map((imageSrc: StaticImageData, index: any) => (
-              <div key={index} className="hidden duration-700 ease-in-out" data-carousel-item="">
-                {/* <span className="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span> */}
-                <Image src={props.imageList[index]} className="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-              </div>
-            ))}
-          </div>
-          { /* Slider indicators */}
-          <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-            {props.imageList.map((imageSrc: any, index: any) => (
-              <button key={index} type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label={`Slide ${index}`} data-carousel-slide-to={`${index}`} />
-            ))}
-          </div>
-          { /* Slider controls */}
-          <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-              <span className="sr-only">Previous</span>
-            </span>
-          </button>
-          <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-              <span className="sr-only">Next</span>
-            </span>
-          </button>
-        </div>
+  //       <div id="default-carousel" className="relative" data-carousel="static">
+  //         { /* Carousel wrapper */}
+  //         <div className="relative overflow-hidden rounded-lg h-48">
+  //           {props.imageList.map((imageSrc: StaticImageData, index: any) => (
+  //             <div key={index} className="hidden duration-700 ease-in-out" data-carousel-item="">
+  //               {/* <span className="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span> */}
+  //               <Image src={props.imageList[index].src} width={props.imageList[index].width} height={props.imageList[index].height} className="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+  //             </div>
+  //           ))}
+  //         </div>
+  //         { /* Slider indicators */}
+  //         <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+  //           {props.imageList.map((imageSrc: any, index: any) => (
+  //             <button key={index} type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label={`Slide ${index}`} data-carousel-slide-to={`${index}`} />
+  //           ))}
+  //         </div>
+  //         { /* Slider controls */}
+  //         <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
+  //           <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+  //             <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+  //             <span className="sr-only">Previous</span>
+  //           </span>
+  //         </button>
+  //         <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
+  //           <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+  //             <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+  //             <span className="sr-only">Next</span>
+  //           </span>
+  //         </button>
+  //       </div>
 
 
 
-      </div>
-      <div className="p-4 space-y-2">
-        <a href={props.link ?? "#"} className="hover:underline decoration-black">
-          <h2 className="text-lg font-bold text-gray-600">{props.title}</h2>
-        </a>
-        <p className="text-sm text-gray-600">{props.description}</p>
-      </div>
-    </div>
-  );
+  //     </div>
+  //     <div className="p-4 space-y-2">
+  //       <a href={props.link ?? "#"} className="hover:underline decoration-black">
+  //         <h2 className="text-lg font-bold text-gray-600">{props.title}</h2>
+  //       </a>
+  //       <p className="text-sm text-gray-600">{props.description}</p>
+  //     </div>
+  //   </div>
+  // );
+
+
+
+
 }

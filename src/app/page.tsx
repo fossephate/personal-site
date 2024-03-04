@@ -9,6 +9,7 @@ import HardwareProjects from "@/components/HardwareProjects";
 
 import profileImage from "@/assets/images/profile/profile-vinny.png";
 import BubblesBackground from "@/components/BubblesBackground";
+import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
 
@@ -101,6 +102,13 @@ export default function Home() {
             />
           </div>
         </main>
+
+        <section className="space-y-4 my-12">
+          <div className="pb-4 flex justify-between">
+            <h1 className="dark:text-white text-3xl font-bold text-gray-600">About Me</h1>
+          </div>
+          <AboutMe preview={true} />
+        </section>
         <section className="space-y-4 my-12">
           <div className="pb-4 flex justify-between">
             <h1 className="dark:text-white text-3xl font-bold text-gray-600">Software Projects</h1>

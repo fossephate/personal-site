@@ -1,9 +1,13 @@
 .maskedOverflow {
+
     /* scroll bar width, for use in mask calculations */
-    --scrollbar-width: 8px;
+    --scrollbar-width: 0px;
 
     /* mask fade distance, for use in mask calculations */
-    --mask-height: 70px;
+    --mask-height: 160px;
+
+    /* Distance from the bottom where the gradient starts */
+    --gradient-bottom-offset: 20px
 
     /* If content exceeds height of container, overflow! */
     overflow-y: hidden;
@@ -16,7 +20,11 @@
     padding-bottom: var(--mask-height);
 
     /* Keep some space between content and scrollbar */
-    padding-right: 20px;
+    /* padding-right: 20px; */
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     /* The CSS mask */
 
@@ -27,12 +35,12 @@
             black calc(100% - var(--mask-height)),
             transparent); */
     --mask-image-content: linear-gradient(to bottom,
-            black calc(80% - var(--mask-height)),
-            transparent);
+        black calc(80% - var(--mask-height)),
+        transparent);
 
     /* Here we scale the content gradient to the width of the container 
   minus the scrollbar width. The height is the full container height */
-    --mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+    --mask-size-content: 100% 100%;
 
     /* The scrollbar mask is a black pixel */
     --mask-image-scrollbar: linear-gradient(black, black);
@@ -42,13 +50,21 @@
     --mask-size-scrollbar: var(--scrollbar-width) 100%;
 
     /* Apply the mask image and mask size variables */
-    mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
-    mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+    mask-image: var(--mask-image-content),
+    var(--mask-image-scrollbar);
+    mask-size: var(--mask-size-content),
+    var(--mask-size-scrollbar);
 
     /* Position the content gradient in the top left, and the 
   scroll gradient in the top right */
-    mask-position: 0 0, 100% 0;
+    mask-position: 0 0,
+    100% 0;
 
     /* We don't repeat our mask images */
-    mask-repeat: no-repeat, no-repeat;
+    mask-repeat: no-repeat,
+    no-repeat;
+}
+
+.maskedOverflow::-webkit-scrollbar {
+    display: none;
 }

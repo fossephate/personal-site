@@ -14,7 +14,7 @@ import clsx from 'clsx';
 
 export default function AboutMe({ preview = false }) {
     return (
-        <div className={clsx(preview && styles.maskedOverflow)}>
+        <div className={clsx(preview && styles.maskedOverflow, "dark:text-white text-black")}>
 
             {!preview && (
                 <div className="space-y-2">
@@ -24,11 +24,11 @@ export default function AboutMe({ preview = false }) {
 
                     <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
                         <p className="text-base sm:text-lg">
-                            Hi there, I&apos;m Matthew Fosse, a 24-year-old software engineer and hardware hacker from Florida. With over 3 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
+                            Hi there, I&apos;m Matthew Fosse, a 24-year-old software engineer and hardware hacker from Florida. With over 5 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                         </p>
 
                         <p className="text-base sm:text-lg">
-                            I am also an avid maker and enjoy working on my own projects, ranging from custom drivers for gaming controllers to advanced cryptocurrency wallets to modded hardware like a 1TB Bluetooth iPod Classic. My skills include Software Development, Electrical Engineering, 3D printing (Fusion 360), Game Development, and more.
+                            I&apos;m also an avid maker and enjoy working on my own projects, ranging from custom drivers for gaming controllers to cryptocurrency wallets to modded iPod Classics. My skills include Software Development, Electrical Engineering, 3D printing (Fusion 360), Game Development, and more.
                         </p>
                         <p className="text-base sm:text-lg">
                             You can find most of my projects either here on my website or on my GitHub{" "}
@@ -47,8 +47,11 @@ export default function AboutMe({ preview = false }) {
 
             {!preview && (
                 <div className="py-4">
-                    <blockquote className="p-4 my-4 bg-gray-200 rounded-md border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-800">
-                        <p className="md:text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white">&quot;Fun fact: My work has made it into the ChatGPT training data set! If you ask ChatGPT about &quot;Who wrote the JoyCon-Driver?&quot; it&apos;ll tell you about me!&quot;</p>
+                    <blockquote className="p-4 my-4 bg-gray-200 rounded-md border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-700">
+                        <p className="md:text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white mb-6">&quot;Fun fact: My work has made it into the ChatGPT training data set! If you ask ChatGPT about &quot;Who wrote the JoyCon-Driver?&quot; it&apos;ll tell you about me!&quot;</p>
+                        <a href="https://chat.openai.com" target="_blank" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-10 rounded">
+                            Try it now!
+                        </a>
                     </blockquote>
                 </div>
             )}

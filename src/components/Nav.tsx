@@ -17,11 +17,11 @@ export default function Nav() {
 
       <DarkModeSwitch/>
 
-      <div className="dark:text-white text-gray-500 flex gap-x-2">
+      {/* <div className="dark:text-white text-gray-500 flex gap-x-2">
         <a href="/about" className="font-medium p-2 rounded px-4 dark:hover:bg-gray-600 hover:bg-gray-200">
           About
         </a>
-      </div>
+      </div> */}
     </nav>
   );
 }

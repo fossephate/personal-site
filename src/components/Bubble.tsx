@@ -8,14 +8,14 @@ type BubbleProps={
 const Bubble = (props: BubbleProps) => {
   const bubbleStyle = {
     // backgroundImage: `url(${props.imageSrc})`,
-    animation: `fadeInOut ${Math.random() * 5 + 5}s infinite`,
+    animation: `fadeInOut ${Math.random() * 5 + 8}s infinite`,
     position: 'absolute',
     // width: '100px',
     // height: '100px',
     borderRadius: '50%',
     backgroundSize: 'cover',
     left: `${Math.random() * 90}%`,
-    top: `${Math.random() * 230}%`,
+    // top: `${Math.random() * 230}%`,
     zIndex: 10,
   };
 

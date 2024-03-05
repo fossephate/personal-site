@@ -10,43 +10,43 @@ import HardwareProjects from "@/components/HardwareProjects";
 import profileImage from "@/assets/images/profile/profile-vinny.png";
 import BubblesBackground from "@/components/BubblesBackground";
 import AboutMe from "@/components/AboutMe";
+import { calculateAge } from "@/utils/utils";
 
 export default function Home() {
 
-  const imageUrls = [
-    require('@/assets/images/compliments/IMG_0250.png'),
-    require('@/assets/images/compliments/IMG_0286.png'),
-    require('@/assets/images/compliments/IMG_0304.png'),
-    require('@/assets/images/compliments/IMG_0329.png'),
-    require('@/assets/images/compliments/IMG_0330.png'),
-    require('@/assets/images/compliments/IMG_0331.png'),
-    require('@/assets/images/compliments/IMG_0332.png'),
-    require('@/assets/images/compliments/IMG_0333.png'),
-    require('@/assets/images/compliments/IMG_0334.png'),
-    require('@/assets/images/compliments/IMG_0335.png'),
-    require('@/assets/images/compliments/IMG_0336.png'),
-    require('@/assets/images/compliments/IMG_0337.png'),
-    require('@/assets/images/compliments/IMG_0338.png'),
-    require('@/assets/images/compliments/IMG_0339.png'),
-    require('@/assets/images/compliments/IMG_0340.png'),
-    require('@/assets/images/compliments/IMG_0341.png'),
-    require('@/assets/images/compliments/IMG_0342.png'),
-    require('@/assets/images/compliments/IMG_0343.png'),
-    require('@/assets/images/compliments/IMG_0344.png'),
-    require('@/assets/images/compliments/IMG_0345.png'),
-    require('@/assets/images/compliments/IMG_0346.png'),
-    require('@/assets/images/compliments/IMG_0347.png'),
-    require('@/assets/images/compliments/IMG_0348.png'),
-    require('@/assets/images/compliments/IMG_0349.png'),
-    require('@/assets/images/compliments/IMG_0350.png'),
-    require('@/assets/images/compliments/IMG_0351.png'),
-    require('@/assets/images/compliments/IMG_0352.png'),
-    require('@/assets/images/compliments/IMG_0353.png'),
-  ];
+  // const imageUrls = [
+  //   require('@/assets/images/compliments/IMG_0250.png'),
+  //   require('@/assets/images/compliments/IMG_0286.png'),
+  //   require('@/assets/images/compliments/IMG_0304.png'),
+  //   require('@/assets/images/compliments/IMG_0329.png'),
+  //   require('@/assets/images/compliments/IMG_0330.png'),
+  //   require('@/assets/images/compliments/IMG_0331.png'),
+  //   require('@/assets/images/compliments/IMG_0332.png'),
+  //   require('@/assets/images/compliments/IMG_0333.png'),
+  //   require('@/assets/images/compliments/IMG_0334.png'),
+  //   require('@/assets/images/compliments/IMG_0335.png'),
+  //   require('@/assets/images/compliments/IMG_0336.png'),
+  //   require('@/assets/images/compliments/IMG_0337.png'),
+  //   require('@/assets/images/compliments/IMG_0338.png'),
+  //   require('@/assets/images/compliments/IMG_0339.png'),
+  //   require('@/assets/images/compliments/IMG_0340.png'),
+  //   require('@/assets/images/compliments/IMG_0341.png'),
+  //   require('@/assets/images/compliments/IMG_0342.png'),
+  //   require('@/assets/images/compliments/IMG_0343.png'),
+  //   require('@/assets/images/compliments/IMG_0344.png'),
+  //   require('@/assets/images/compliments/IMG_0345.png'),
+  //   require('@/assets/images/compliments/IMG_0346.png'),
+  //   require('@/assets/images/compliments/IMG_0347.png'),
+  //   require('@/assets/images/compliments/IMG_0348.png'),
+  //   require('@/assets/images/compliments/IMG_0349.png'),
+  //   require('@/assets/images/compliments/IMG_0350.png'),
+  //   require('@/assets/images/compliments/IMG_0351.png'),
+  //   require('@/assets/images/compliments/IMG_0352.png'),
+  //   require('@/assets/images/compliments/IMG_0353.png'),
+  // ];
 
   return (
     <div className="bg-white dark:bg-gray-800 dark:text-white overflow-y-auto">
-      {/* <BubblesBackground imageUrls={imageUrls} /> */}
       <div className="w-full max-w-5xl mx-auto p-8 z-30 relative">
         <div className="font-mono">
           <Nav />
@@ -66,7 +66,7 @@ export default function Home() {
               I&apos;m <span className="whitespace-nowrap">Matthew Fosse</span>
             </h1>
             <p className="dark:text-gray-400 text-gray-600 <sm:text-center sm:text-left">
-              24 Year Old Software Engineer<br /> and Hardware Hacker based in Seattle
+              {calculateAge('1999-04-07')} Year Old Software Engineer<br /> and Hardware Hacker based in Seattle
             </p>
             <div>
               <div className=" flex gap-6" style={{ cursor: "pointer" }}>
@@ -121,12 +121,14 @@ export default function Home() {
           </div>
           <HardwareProjects />
         </section>
-        <section className="space-y-4 my-12">
+        {/* <section className="space-y-4 my-12">
           <div className="pb-4 flex justify-between">
             <h1 className="dark:text-white text-3xl font-bold text-gray-600">Reviews</h1>
           </div>
-          
-        </section>
+          <div className="h-[800px] bg-gray-400 rounded-lg">
+            <BubblesBackground imageUrls={imageUrls} />
+          </div>
+        </section> */}
         <Footer />
       </div >
     </div >

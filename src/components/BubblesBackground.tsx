@@ -7,6 +7,7 @@ interface BubblesBackgroundProps {
   imageUrls: StaticImageData[];
 }
 
+
 const BubblesBackground: React.FC<BubblesBackgroundProps> = ({ imageUrls }) => {
   return (
     <div>

@@ -10,6 +10,7 @@ import Link from 'next/link';
 
 import styles from "./AboutMe.module.css";
 import clsx from 'clsx';
+import { calculateAge } from "@/utils/utils";
 
 
 export default function AboutMe({ preview = false }) {
@@ -24,7 +25,7 @@ export default function AboutMe({ preview = false }) {
 
                     <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
                         <p className="text-base sm:text-lg">
-                            Hi there, I&apos;m Matthew Fosse, a 24-year-old software engineer and hardware hacker from Florida. With over 5 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
+                            Hi there, I&apos;m Matthew Fosse, a {calculateAge('1999-04-07')}-year-old software engineer and hardware hacker from Florida. With over 5 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                         </p>
 
                         <p className="text-base sm:text-lg">
@@ -67,22 +68,24 @@ export default function AboutMe({ preview = false }) {
 
 
                     {/* <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
-                <div className="flex flex-row justify-between pt-2">
-                  <div className="flex flex-col items-start space-y-1">
-                    <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Flutter Developer</div>
-                    <div className="bg-white dark:bg-gray-800 rounded-md px-2">Cake Labs</div>
-                  </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1">
-                    June 2023 - Present
-                  </div>
-                </div>
-                <li className="my-2">
-                  <ul className="md:ml-4 list-inside list-none md:list-disc">
-                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and built products for the cryptocurrency community</li>
-                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Brought features to market in a timely manner</li>
-                  </ul>
-                </li>
-              </ul> */}
+                        <div className="flex flex-row justify-between pt-2">
+                            <div className="flex flex-col items-start space-y-1">
+                                <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Flutter Developer</div>
+                                <div className="bg-white dark:bg-gray-800 rounded-md px-2">Cake Labs</div>
+                            </div>
+                            <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1">
+                                June 2023 - Present
+                            </div>
+                        </div>
+                        <li className="my-2">
+                            <ul className="md:ml-4 list-inside list-none md:list-disc">
+                                <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Added Bitcoin Lightning support</li>
+                                <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Responsible for the Tor protocol implementation</li>
+                                <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Added support for the Nano cryptocurrency</li>
+                                <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and brought features to market in a timely manner</li>
+                            </ul>
+                        </li>
+                    </ul> */}
 
                     <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
                         <div className="flex flex-row justify-between pt-2">
@@ -125,7 +128,6 @@ export default function AboutMe({ preview = false }) {
                         </div>
                         <li className="my-2">
                             <ul className="md:ml-4 list-inside list-none md:list-disc">
-                                <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Utilized 3 years of professional experience in software development and research</li>
                                 <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Analyzed hardware, software, and network applications with and without source code</li>
                                 <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Leveraged static and dynamic software analysis tools such as IDA Pro, Ghidra, and Binary Ninja</li>
                                 <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Developed and reverse engineered primarily in assembly languages and C/C++/Python</li>

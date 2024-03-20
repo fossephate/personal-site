@@ -51,21 +51,21 @@ export default function Home() {
         <div className="font-mono">
           <Nav />
         </div>
-        <main className="my-12 font-mono w-full dark:bg-gray-900 bg-gray-200 rounded-lg p-12 flex justify-between items-center <sm:flex-col sm:flex-row">
-          <div className="<sm:w-full sm:w-1/2 space-y-4">
-            <div className="<sm:block sm:hidden w-full">
+        <main className="my-12 font-mono w-full dark:bg-gray-900 bg-gray-200 rounded-lg p-12 flex justify-between items-center flex-col sm:flex-row">
+          <div className="w-full sm:w-1/2 space-y-4">
+            <div className="block sm:hidden w-full">
               <Image
                 src={profileImage}
                 className="bg-gradient-to-r p-[5px] from-[#9736F4] to-[#ff0080] rounded-full object-cover w-32 h-32 mx-auto"
                 alt="profile image"
               />
             </div>
-            <h1 className="dark:text-gray-300 text-gray-700 text-3xl font-bold <sm:text-center sm:text-left">
+            <h1 className="dark:text-gray-300 text-gray-700 text-3xl font-bold text-center sm:text-left">
               Hi 👋
               <br />
               I&apos;m <span className="whitespace-nowrap">Matthew Fosse</span>
             </h1>
-            <p className="dark:text-gray-400 text-gray-600 <sm:text-center sm:text-left">
+            <p className="dark:text-gray-400 text-gray-600 text-center sm:text-left">
               {calculateAge('1999-04-07')} Year Old Software Engineer<br /> and Hardware Hacker based in Seattle
             </p>
             <div>
@@ -94,7 +94,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="<sm:hidden sm:block">
+          <div className="hidden sm:visible sm:block">
             <Image
               src={profileImage}
               className="bg-gradient-to-r p-[7px] from-[#9736F4] to-[#ff0080] w-56 h-56 rounded-full object-cover"

@@ -8,5 +8,22 @@
 
 .embla__slide {
     flex: 0 0 100%;
-    min-width: 0;
+    /* min-width: 0; */
+
+    /* min-width: 309px; */
+    /* max-height: 175px; */
+    justify-content: center;
+    display: flex;
+}
+
+.embla__slide img {
+    max-width: 309px;
+    max-height: 191px;
+    width: auto !important;
+    height: auto !important;
+    /* flex: 0 0 100%; */
+    /* min-width: 0; */
+
+    /* min-width: 309px; */
+    /* max-height: 175px; */
 }

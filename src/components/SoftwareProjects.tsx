@@ -18,7 +18,7 @@ import switchImage from "@/assets/images/software/switch-controller.jpg";
 
 export default function SoftwareProjects() {
   return (
-    <div className="grid <sm:grid-cols-1 sm:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
       {/* <ProjectCardCarousel
         link="https://remotegames.io/s/fosse5"

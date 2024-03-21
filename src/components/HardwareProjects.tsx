@@ -41,7 +41,7 @@ import timer2 from "@/assets/videos/timer/timer2.gif";
 
 export default function HardwareProjects() {
   return (
-    <div className="grid <sm:grid-cols-1 sm:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
       <ProjectCardCarousel
         link="https://www.reddit.com/r/ipod/comments/p7as70/finally_finished_modding_my_7th_gen_classic_with/"

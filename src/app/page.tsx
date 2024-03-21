@@ -8,9 +8,11 @@ import SoftwareProjects from "@/components/SoftwareProjects";
 import HardwareProjects from "@/components/HardwareProjects";
 
 import profileImage from "@/assets/images/profile/profile-vinny.png";
-import BubblesBackground from "@/components/BubblesBackground";
+// import BubblesBackground from "@/components/BubblesBackground";
 import AboutMe from "@/components/AboutMe";
 import { calculateAge } from "@/utils/utils";
+
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
 
@@ -47,6 +49,7 @@ export default function Home() {
 
   return (
     <div className="bg-white dark:bg-gray-800 dark:text-white overflow-y-auto">
+      <AnimatedBackground />
       <div className="w-full max-w-5xl mx-auto p-8 z-30 relative">
         <div className="font-mono">
           <Nav />
@@ -121,6 +124,7 @@ export default function Home() {
           </div>
           <HardwareProjects />
         </section>
+        
         {/* <section className="space-y-4 my-12">
           <div className="pb-4 flex justify-between">
             <h1 className="dark:text-white text-3xl font-bold text-gray-600">Reviews</h1>
@@ -128,7 +132,8 @@ export default function Home() {
           <div className="h-[800px] bg-gray-400 rounded-lg">
             <BubblesBackground imageUrls={imageUrls} />
           </div>
-        </section> */}
+        </section>*/}
+
         <Footer />
       </div >
     </div >

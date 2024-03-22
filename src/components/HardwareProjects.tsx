@@ -34,6 +34,16 @@ import idog2 from "@/assets/images/alpha/DSC00045.jpg";
 
 import timer1 from "@/assets/videos/timer/timer1.gif";
 import timer2 from "@/assets/videos/timer/timer2.gif";
+import timer3 from "@/assets/images/hardware/timer/timer1.jpg";
+import timer4 from "@/assets/images/hardware/timer/timer2.jpg";
+
+import desk1 from "@/assets/images/hardware/desk/desk1.jpg";
+import desk2 from "@/assets/images/hardware/desk/desk2.jpg";
+
+
+import nas1 from "@/assets/images/hardware/nas/nas1.jpg";
+import nas2 from "@/assets/images/hardware/nas/nas2.jpg";
+import nas3 from "@/assets/images/hardware/nas/nas3.jpg";
 
 
 // import moddedIdog from "@/assets/images/alpha/DSC00045.JPG";
@@ -92,6 +102,8 @@ export default function HardwareProjects() {
         imageList={[
           timer1,
           timer2,
+          timer3,
+          timer4,
         ]}
         title="The Everyday Timer!"
         description="A simple digital hour glass that resets once a day. Useful for remembering to do daily chores like feeding my cat"
@@ -129,6 +141,36 @@ export default function HardwareProjects() {
         title="Tesla Model 3 Mods"
         description="Collection of mods I made for my car"
       />
+
+      <ProjectCardCarousel
+        imageList={[
+          desk1,
+          desk2,
+        ]}
+        title="Desk Setup"
+        description="My various desk setups throughout the years"
+      />
+
+
+      <ProjectCardCarousel
+        imageList={[
+          nas1,
+          nas2,
+          nas3,
+        ]}
+        title="Home Media Server"
+        description="My home media server, beefy enough for friends & family"
+      />
+
+
+      <ProjectCard
+        link=""
+        imageSrc={require("@/assets/images/hardware/projector-mount.jpg")}
+        title="Projector Mount"
+        description="Needed a way to hold my projector on top of my bed frame"
+      />
+
+
     </div>
   );
 }

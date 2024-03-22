@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import anime from 'animejs';
@@ -38,7 +39,7 @@ const AnimatedBackground = () => {
     document.body.classList.toggle(styles.toggled);
   };
 
-  const handleOnClick = (index) => {
+  const handleOnClick = (index: any) => {
     toggle();
     setAnimationRef(anime({
       targets: ".tile",
@@ -50,9 +51,10 @@ const AnimatedBackground = () => {
     }));
   };
 
-  const createTile = (index) => {
+  const createTile = (index: any) => {
     const tile = document.createElement('div');
-    tile.classList.add("tile");
+    // tile.classList.add("tile");
+    tile.classList.add("tile", "before:bg-slate-200", "hover:before:bg-slate-300", "dark:before:bg-slate-900", "dark:hover:before:bg-slate-800");
     tile.style.opacity = toggled ? 0 : 1;
     tile.onclick = () => {
       handleOnClick(index);
@@ -77,7 +79,8 @@ const AnimatedBackground = () => {
 
     // let height = Math.max( body.scrollHeight, body.offsetHeight, 
     //                    html.clientHeight, html.scrollHeight, html.offsetHeight );
-    let height = 3224;
+    // let height = 3540;
+    let height = body.clientHeight;
 
     let width = body.clientWidth;
     let ratio = (width-10) / height;

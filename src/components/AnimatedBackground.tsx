@@ -143,7 +143,7 @@ const AnimatedBackground = () => {
 
 
 
-    animateRandomMovement(false);
+    // animateRandomMovement(false);
     return tile;
   };
 

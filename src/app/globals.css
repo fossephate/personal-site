@@ -49,4 +49,5 @@ body {
   content: "";
   inset: 0.5px;
   position: absolute;
+  /* border-radius: 0.5rem; */
 }

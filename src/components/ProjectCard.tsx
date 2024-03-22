@@ -11,7 +11,7 @@ type ProjectCardProps={
 export default function ProjectCard(props: ProjectCardProps) {
   return (
     <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
-      <div className="rounded-t-md bg-gray-300">
+      <div className="rounded-t-lg bg-gray-300 py-2">
         <a href={props.link}>
           <Image src={props.imageSrc} height="200" className="rounded-b-sm mx-auto max-h-44" alt="project image" />
         </a>

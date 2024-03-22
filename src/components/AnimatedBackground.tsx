@@ -22,16 +22,16 @@ const AnimatedBackground = () => {
     createGrid();
     window.onresize = createGrid;
 
-    setAnimationRef(
-        anime({
-            targets: ".tile",
-            opacity: toggled ? 0 : 1,
-            delay: anime.stagger(50, {
-              grid: [columns, rows],
-              from: 0,
-            }),
-        }),
-    );
+    // setAnimationRef(
+    //     anime({
+    //         targets: ".tile",
+    //         opacity: toggled ? 0 : 1,
+    //         delay: anime.stagger(50, {
+    //           grid: [columns, rows],
+    //           from: 0,
+    //         }),
+    //     }),
+    // );
   }, []);
 
   const toggle = () => {
@@ -41,14 +41,54 @@ const AnimatedBackground = () => {
 
   const handleOnClick = (index: any) => {
     toggle();
-    setAnimationRef(anime({
+    // setAnimationRef(anime({
+    //   targets: ".tile",
+    //   opacity: toggled ? 0 : 1,
+    //   delay: anime.stagger(40, {
+    //     grid: [columns, rows],
+    //     from: index,
+    //   }),
+    // }));
+
+    anime({
       targets: ".tile",
       opacity: toggled ? 0 : 1,
       delay: anime.stagger(40, {
         grid: [columns, rows],
         from: index,
       }),
-    }));
+    });
+
+    // setTimeout(() => {
+    //   toggle();
+    //   anime({
+    //     targets: ".tile",
+    //     opacity: toggled ? 1 : 0,
+    //     delay: anime.stagger(40, {
+    //       grid: [columns, rows],
+    //       from: index,
+    //     }),
+    //   });
+
+    // }, 2000);
+
+
+      // anime({
+    //   targets: ".tile",
+    //   opacity: [0, 1],
+    //   delay: anime.stagger(40, {
+    //     grid: [columns, rows],
+    //     from: index,
+    //   }),
+    // });
+    // anime({
+    //   targets: ".tile",
+    //   opacity: toggled ? 1 : 0,
+    //   delay: anime.stagger(1000, {
+    //     grid: [columns, rows],
+    //     from: index,
+    //   }),
+    // })
   };
 
   const createTile = (index: any) => {
@@ -60,8 +100,50 @@ const AnimatedBackground = () => {
       handleOnClick(index);
       setTimeout(() => {
         handleOnClick(index);
-      }, 1000); 
+      }, 2000); 
     }
+
+    // Create the waver animation for each tile
+    let distance = 5;
+    // anime({
+    //   targets: tile,
+    //   translateX: function () {
+    //     return anime.random(-distance, distance);
+    //   },
+    //   translateY: function () {
+    //     return anime.random(-distance, distance);
+    //   },
+    //   duration: function () {
+    //     return anime.random(500, 3000);
+    //   },
+    //   delay: function () {
+    //     return anime.random(0, 1000);
+    //   },
+    //   // loop: true,
+    //   // direction: 'alternate',
+    //   easing: 'easeInOutSine',
+    // });
+
+
+
+    // Create the random movement animation for each tile
+    const animateRandomMovement = (isReturn) => {
+      const randomX = anime.random(-distance, distance);
+      const randomY = anime.random(-distance, distance);
+
+      anime({
+        targets: tile,
+        translateX: randomX,
+        translateY: randomY,
+        duration: anime.random(1000, 3000),
+        easing: isReturn ? 'linear' : 'linear',
+        complete: () => {animateRandomMovement(!isReturn)},
+      });
+    };
+
+
+
+    animateRandomMovement(false);
     return tile;
   };
 
@@ -76,10 +158,6 @@ const AnimatedBackground = () => {
     // const size = document.body.clientWidth > 800 ? 100 : 50;
     let body = document.body,
     html = document.documentElement;
-
-    // let height = Math.max( body.scrollHeight, body.offsetHeight, 
-    //                    html.clientHeight, html.scrollHeight, html.offsetHeight );
-    // let height = 3540;
     let height = body.clientHeight;
 
     let width = body.clientWidth;

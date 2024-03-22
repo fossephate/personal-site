@@ -25,9 +25,9 @@ export default function ProjectCardCarousel(props: any) {
 
 
   return (
-    <div className="dark:bg-gray-100 bg-gray-200 rounded-lg">
-      <div className="rounded-t-lg bg-gray-300 py-2">
-        <div ref={emblaRef} className={clsx("relative overflow-hidden h-48", styles.embla)}>
+    <div className="dark:bg-gray-100 bg-gray-200 dark:bg-gray-800 rounded-lg">
+      <div className="rounded-t-lg bg-gray-300 dark:bg-gray-600 py-2">
+        <div ref={emblaRef} className={clsx("relative overflow-hidden", styles.embla)}>
           <div className={styles.embla__container}>
             {/* <Image src={props.imageList[0].src} width={props.imageList[0].width} height={props.imageList[0].height} alt="..." /> */}
             {/* <div className={styles.embla__slide}>Slide 1</div>
@@ -58,9 +58,9 @@ export default function ProjectCardCarousel(props: any) {
       </div>
       <div className="p-4 space-y-2">
         <a href={props.link ?? "#"} className="hover:underline decoration-black">
-          <h2 className="text-lg font-bold text-gray-600">{props.title}</h2>
+          <h2 className="text-lg font-bold text-gray-600 dark:text-gray-100">{props.title}</h2>
         </a>
-        <p className="text-sm text-gray-600">{props.description}</p>
+        <p className="text-sm text-gray-600 dark:text-gray-300">{props.description}</p>
       </div>
     </div>
   );

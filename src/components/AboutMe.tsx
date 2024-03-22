@@ -24,7 +24,7 @@ export default function AboutMe({ preview = false }) {
                             About Me
                         </h1>
 
-                        <div className="bg-gray-200 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
+                        <div className="bg-gray-300 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
                             <p className="text-base sm:text-lg">
                                 Hi there, I&apos;m Matthew Fosse, a {calculateAge('1999-04-07')}-year-old software engineer and hardware hacker from Florida. With over 5 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                             </p>
@@ -49,7 +49,7 @@ export default function AboutMe({ preview = false }) {
 
                 {!preview && (
                     <div className="py-4">
-                        <blockquote className="p-4 my-4 bg-gray-200 rounded-md border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-700">
+                        <blockquote className="p-4 my-4 bg-gray-300 rounded-md border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-700">
                             <p className="md:text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white mb-6">&quot;Fun fact: My work has made it into the ChatGPT training data set! If you ask ChatGPT about &quot;Who wrote the JoyCon-Driver?&quot; it&apos;ll tell you about me!&quot;</p>
                             <a href="https://chat.openai.com" target="_blank" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-10 rounded">
                                 Try it now!
@@ -68,7 +68,7 @@ export default function AboutMe({ preview = false }) {
                         </h1>
 
 
-                        <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
                             <div className="flex flex-row justify-between pt-2">
                                 <div className="flex flex-col items-start space-y-1">
                                     <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Flutter Developer</div>
@@ -97,7 +97,7 @@ export default function AboutMe({ preview = false }) {
                             </>
                         )} */}
 
-                        <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
                             <div className="flex flex-row justify-between pt-2">
                                 <div className="flex flex-col items-start space-y-1">
                                     <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Software Engineer</div>
@@ -119,7 +119,7 @@ export default function AboutMe({ preview = false }) {
 
 
 
-                        <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
                             <div className="flex flex-row justify-between pt-2">
                                 <div className="flex flex-col items-start space-y-1">
                                     <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2 w-max">Vulnerability Researcher</div>
@@ -146,7 +146,7 @@ export default function AboutMe({ preview = false }) {
                             Projects
                         </h1>
 
-                        <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1">
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1">
                             <li className="my-2">
                                 <div className="flex flex-row justify-between font-medium">
                                     <span className="space-y-2">
@@ -165,7 +165,7 @@ export default function AboutMe({ preview = false }) {
                             </li>
                         </ul>
 
-                        <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1">
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1">
                             <li className="my-2">
                                 <div className="flex flex-row justify-between font-medium">
                                     <span className="space-y-2">
@@ -183,7 +183,7 @@ export default function AboutMe({ preview = false }) {
                             </li>
                         </ul>
 
-                        <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1">
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1">
                             <li className="my-2">
                                 <div className="flex flex-row justify-between font-medium">
                                     <span className="space-y-2">
@@ -206,7 +206,7 @@ export default function AboutMe({ preview = false }) {
                         <div className="col-span-7 bg-yellow-300 dark:bg-yellow-400 px-4 py-1 font-semibold sm:text-lg rounded-md">
                             Skills
                         </div>
-                        <div className="grid grid-cols-7 gap-4 p-2 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 rounded-md">
+                        <div className="grid grid-cols-7 gap-4 p-2 dark:border-gray-600 bg-gray-300 dark:bg-gray-700 rounded-md">
                             <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Languages</div>
                             <div className="px-4 py-2 text-sm sm:text-base col-span-5 bg-white dark:bg-gray-800 rounded-md shadow">
                                 Rust, JavaScript/Typescript, Dart, Python2/3, Go, C#, C/C++, Java, Lua
@@ -224,7 +224,7 @@ export default function AboutMe({ preview = false }) {
 
                     <div className="space-y-2">
                         <h1 className="bg-red-300 dark:bg-red-600 font-semibold px-4 py-1 font-semibold sm:text-lg rounded-md">Education</h1>
-                        <ul className="bg-gray-200 dark:bg-gray-700 list-inside px-8 sm:text-base text-xs rounded-md">
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-8 sm:text-base text-xs rounded-md">
                             <li className="my-2">
                                 <div className="flex flex-row justify-between font-medium">
                                     {/* <span> */}

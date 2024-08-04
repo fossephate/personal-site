@@ -8,7 +8,7 @@ import joyconImage from "@/assets/images/software/joycon-driver.png";
 import physics3Image from "@/assets/images/software/physics3.png";
 import soccercarsImage from "@/assets/images/software/soccer-cars1.png";
 import aimbotImage from "@/assets/images/software/aimbot.png";
-import vulkanImage from "@/assets/images/software/vulkan.png";
+import vulkanImage from "@/assets/images/software/vulkan-engine.png";
 import switchImage from "@/assets/images/software/switch-controller.jpg";
 // import remotegamesImage from "@/assets/images/software/remotegames.png";
 
@@ -57,6 +57,13 @@ export default function SoftwareProjects() {
         imageSrc={joyconImage}
         title="JoyCon-Driver"
         description="It lets you use your Nintendo Switch's Joy-Cons on your PC! The first of its kind and I pioneered a lot of the reverse engineering that made the project possible"
+      />
+
+      <ProjectCard
+        link="https://github.com/fossephate/whiteboard"
+        imageSrc={joyconImage}
+        title="Grocery-Whiteboard"
+        description=""
       />
 
       <ProjectCard

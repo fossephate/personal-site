@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
     <div className="bg-white dark:bg-gray-800 dark:text-white overflow-y-auto">
-      <AnimatedBackground />
+      {/* <AnimatedBackground /> */}
       {/* <div className="w-full max-w-5xl mx-auto p-8 z-30 absolute left-1/2 transform -translate-x-1/2"> */}
       <div className="w-full max-w-5xl mx-auto p-8 z-30 relative">
         <div className="font-mono">

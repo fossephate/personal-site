@@ -25,8 +25,8 @@ export default function ProjectCardCarousel(props: any) {
 
 
   return (
-    <div className="dark:bg-gray-100 bg-gray-200 dark:bg-gray-800 rounded-lg">
-      <div className="rounded-t-lg bg-gray-300 dark:bg-gray-600 py-2">
+    <div className="dark:bg-gray-100 bg-gray-200 dark:bg-gray-900 rounded-lg">
+      <div className="rounded-t-lg bg-gray-400 dark:bg-gray-600 py-2">
         <div ref={emblaRef} className={clsx("relative overflow-hidden", styles.embla)}>
           <div className={styles.embla__container}>
             {/* <Image src={props.imageList[0].src} width={props.imageList[0].width} height={props.imageList[0].height} alt="..." /> */}

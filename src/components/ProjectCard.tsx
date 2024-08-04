@@ -10,8 +10,8 @@ type ProjectCardProps={
 
 export default function ProjectCard(props: ProjectCardProps) {
   return (
-    <div className="dark:bg-gray-100 bg-gray-200 dark:bg-gray-800 rounded-lg">
-      <div className="rounded-t-lg bg-gray-300 dark:bg-gray-600 py-2">
+    <div className="dark:bg-gray-100 bg-gray-200 dark:bg-gray-900 rounded-lg">
+      <div className="rounded-t-lg bg-gray-400 dark:bg-gray-600 py-2">
         <a href={props.link}>
           <Image src={props.imageSrc} height="200" className="rounded-b-sm mx-auto max-h-44" alt="project image" />
         </a>

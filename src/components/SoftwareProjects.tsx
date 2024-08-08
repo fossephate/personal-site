@@ -11,8 +11,13 @@ import aimbotImage from "@/assets/images/software/aimbot.png";
 import vulkanImage from "@/assets/images/software/vulkan-engine.png";
 import switchImage from "@/assets/images/software/switch-controller.jpg";
 // import remotegamesImage from "@/assets/images/software/remotegames.png";
+import fridgeBoard1 from "@/assets/images/software/fridge-board-1.png";
+import fridgeBoard2 from "@/assets/images/software/fridge-board-2.png";
+import fridgeBoard3 from "@/assets/images/software/fridge-board-3.jpg";
 
-// import ProjectCardCarousel from "./ProjectCardCarousel";
+
+
+import ProjectCardCarousel from "./ProjectCardCarousel";
 
 
 
@@ -59,11 +64,15 @@ export default function SoftwareProjects() {
         description="It lets you use your Nintendo Switch's Joy-Cons on your PC! The first of its kind and I pioneered a lot of the reverse engineering that made the project possible"
       />
 
-      <ProjectCard
-        link="https://github.com/fossephate/whiteboard"
-        imageSrc={joyconImage}
+      <ProjectCardCarousel
+        link="https://fosse.co/board/"
+        imageList={[
+          fridgeBoard3,
+          fridgeBoard1,
+          fridgeBoard2,
+        ]}
         title="Grocery-Whiteboard"
-        description=""
+        description="An auto-syncing realtime whiteboard for my fridge!"
       />
 
       <ProjectCard
@@ -88,7 +97,12 @@ export default function SoftwareProjects() {
         description="An aimbot for overwatch from when the game first came out (~2016)"
       />
 
-
+      {/* <ProjectCard
+        link="https://github.com/fossephate/clipboard-share"
+        imageSrc={aimbotImage}
+        title="Clipboard-Share"
+        description="A simple script to keep your clipboard in sync between machines"
+      /> */}
 
       <ProjectCard
         link="/physics3"

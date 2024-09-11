@@ -71,7 +71,7 @@ export default function SoftwareProjects() {
           fridgeBoard1,
           fridgeBoard2,
         ]}
-        title="Grocery-Whiteboard"
+        title="Fridge-Board"
         description="An auto-syncing realtime whiteboard for my fridge!"
       />
 

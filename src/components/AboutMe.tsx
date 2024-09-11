@@ -141,7 +141,7 @@ export default function AboutMe({ preview = false }) {
                         </ul>}
                     </div>
 
-                    {!preview && <div>
+                    {!preview && <div className="space-y-8">
 
                         <div className="space-y-2">
                             <h1 className="bg-blue-300 dark:bg-blue-600 font-semibold px-4 py-1 rounded-md text-md sm:text-lg">

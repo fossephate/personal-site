@@ -46,12 +46,41 @@ import nas2 from "@/assets/images/hardware/nas/nas2.jpg";
 import nas3 from "@/assets/images/hardware/nas/nas3.jpg";
 
 
+import glasses1 from "@/assets/images/hardware/glasses/IMG_2603.jpg";
+import glasses2 from "@/assets/images/hardware/glasses/IMG_2602.jpg";
+import glasses3 from "@/assets/images/hardware/glasses/IMG_2601.jpg";
+import glasses4 from "@/assets/images/hardware/glasses/IMG_2600.jpg";
+import glasses5 from "@/assets/images/hardware/glasses/IMG_2599.jpg";
+import glasses6 from "@/assets/images/hardware/glasses/IMG_2469.jpg";
+import glasses7 from "@/assets/images/hardware/glasses/IMG_2471.jpg";
+import glasses8 from "@/assets/images/hardware/glasses/IMG_2472.jpg";
+import glasses9 from "@/assets/images/hardware/glasses/IMG_2474.jpg";
+
+
+
 // import moddedIdog from "@/assets/images/alpha/DSC00045.JPG";
 
 
 export default function HardwareProjects() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+      <ProjectCardCarousel
+        link="https://www.reddit.com/r/ipod/comments/p7as70/finally_finished_modding_my_7th_gen_classic_with/"
+        imageList={[
+          glasses1,
+          glasses2,
+          glasses3,
+          glasses4,
+          glasses5,
+          glasses6,
+          glasses7,
+          glasses8,
+          glasses9,
+        ]}
+        title="AR Glasses Lens Holder Mod"
+        description="I designed and printed lens holders for my AR glasses!"
+      />
 
       <ProjectCardCarousel
         link="https://www.reddit.com/r/ipod/comments/p7as70/finally_finished_modding_my_7th_gen_classic_with/"

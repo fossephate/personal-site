@@ -51,7 +51,7 @@ import glasses2 from "@/assets/images/hardware/glasses/IMG_2602.jpg";
 import glasses3 from "@/assets/images/hardware/glasses/IMG_2601.jpg";
 import glasses4 from "@/assets/images/hardware/glasses/IMG_2600.jpg";
 import glasses5 from "@/assets/images/hardware/glasses/IMG_2599.jpg";
-import glasses6 from "@/assets/images/hardware/glasses/IMG_2469.jpg";
+// import glasses6 from "@/assets/images/hardware/glasses/IMG_2469.jpg";
 import glasses7 from "@/assets/images/hardware/glasses/IMG_2471.jpg";
 import glasses8 from "@/assets/images/hardware/glasses/IMG_2472.jpg";
 import glasses9 from "@/assets/images/hardware/glasses/IMG_2474.jpg";
@@ -73,7 +73,7 @@ export default function HardwareProjects() {
           glasses3,
           glasses4,
           glasses5,
-          glasses6,
+          // glasses6,
           glasses7,
           glasses8,
           glasses9,

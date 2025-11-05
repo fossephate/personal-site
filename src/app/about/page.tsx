@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import profileImage from '@/assets/images/profile/profile-vinny.png';
+import profileImage from '@/assets/images/profile/profile-japan.jpg';
 
 import SkillTags from '@/components/SkillTag';
 import AboutMe from '@/components/AboutMe';

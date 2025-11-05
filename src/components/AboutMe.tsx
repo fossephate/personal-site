@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import profileImage from '@/assets/images/profile/profile-vinny.png';
+import profileImage from '@/assets/images/profile/profile-japan.jpg';
 
 import SkillTags from '@/components/SkillTag';
 import Link from 'next/link';
@@ -67,6 +67,24 @@ export default function AboutMe({ preview = false }) {
                             Work Experience
                         </h1>
 
+                        <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
+                            <div className="flex flex-row justify-between pt-2">
+                                <div className="flex flex-col items-start space-y-1">
+                                    <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Head of Client</div>
+                                    <div className="bg-white dark:bg-gray-800 rounded-md px-2">Mentra Labs</div>
+                                </div>
+                                <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1">
+                                    March 2025 - Present
+                                </div>
+                            </div>
+                            <li className="my-2">
+                                <ul className="md:ml-4 list-inside list-none md:list-disc">
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Wrote iOS implementation from scratch</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Transformed mobile codebase to use modern frameworks</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Added theming and i18n support</li>
+                                </ul>
+                            </li>
+                        </ul>
 
                         <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
                             <div className="flex flex-row justify-between pt-2">
@@ -75,7 +93,7 @@ export default function AboutMe({ preview = false }) {
                                     <div className="bg-white dark:bg-gray-800 rounded-md px-2">Cake Labs</div>
                                 </div>
                                 <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1">
-                                    June 2023 - Present
+                                    June 2023 - March 2025
                                 </div>
                             </div>
                             <li className="my-2">

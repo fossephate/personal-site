@@ -127,7 +127,7 @@ export default function HardwareProjects() {
         description="I have too many keyboards to count, but I have a few that I'm proud of"
       />
 
-      <ProjectCardCarousel
+      {/* <ProjectCardCarousel
         imageList={[
           timer1,
           timer2,
@@ -136,7 +136,7 @@ export default function HardwareProjects() {
         ]}
         title="The Everyday Timer!"
         description="A simple digital hour glass that resets once a day. Useful for remembering to do daily chores like feeding my cat"
-      />
+      /> */}
 
       <ProjectCard
         link=""

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import SoftwareProjects from "@/components/SoftwareProjects";
 import HardwareProjects from "@/components/HardwareProjects";
 
-import profileImage from "@/assets/images/profile/profile-vinny.png";
+import profileImage from "@/assets/images/profile/profile-japan.jpg";
 // import BubblesBackground from "@/components/BubblesBackground";
 import AboutMe from "@/components/AboutMe";
 import { calculateAge } from "@/utils/utils";
@@ -70,7 +70,7 @@ export default function Home() {
               I&apos;m <span className="whitespace-nowrap">Matthew Fosse</span>
             </h1>
             <p className="dark:text-gray-400 text-gray-600 text-center sm:text-left">
-              {calculateAge('1999-04-07')} Year Old Software Engineer<br /> and Hardware Hacker based in Seattle
+              {calculateAge('1999-04-07')} Year Old Software Engineer<br /> and Hardware Hacker based in San Francisco
             </p>
             <div>
               <div className="flex gap-6" style={{ cursor: "pointer" }}>

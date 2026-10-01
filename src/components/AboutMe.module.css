@@ -7,7 +7,7 @@
     --mask-height: 160px;
 
     /* Distance from the bottom where the gradient starts */
-    --gradient-bottom-offset: 20px
+    --gradient-bottom-offset: 20px;
 
     /* If content exceeds height of container, overflow! */
     overflow-y: hidden;

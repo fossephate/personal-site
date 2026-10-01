@@ -26,7 +26,7 @@ export default function AboutMe({ preview = false }) {
 
                         <div className="bg-gray-300 dark:bg-gray-700 p-2 flex flex-col space-y-2 rounded-md">
                             <p className="text-base sm:text-lg">
-                                Hi there, I&apos;m Matthew Fosse, a {calculateAge('1999-04-07')}-year-old software engineer and hardware hacker from Florida. With over 5 years of professional experience, I specialize in vulnerability research and software development. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
+                                Hi there, I&apos;m Matthew Fosse, a {calculateAge('1999-04-07')}-year-old software engineer and hardware hacker from Florida. With over 7 years of professional experience, I specialize in mobile development, software development, and vulnerability research. I have experience analyzing hardware, software, and network applications with and without source code. My expertise lies in Web Development, Reverse Engineering, and Hardware Hacking, and I have extensive development and reverse engineering experience with Android and Ghidra in particular.
                             </p>
 
                             <p className="text-base sm:text-lg">
@@ -70,18 +70,18 @@ export default function AboutMe({ preview = false }) {
                         <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1 text-sm sm:text-base">
                             <div className="flex flex-row justify-between pt-2">
                                 <div className="flex flex-col items-start space-y-1">
-                                    <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Head of Client</div>
+                                    <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2">Founding Engineer / Head of Mobile</div>
                                     <div className="bg-white dark:bg-gray-800 rounded-md px-2">Mentra Labs</div>
                                 </div>
-                                <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1">
-                                    March 2025 - Present
+                                <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1 ml-2">
+                                    March 2025 - July 2026
                                 </div>
                             </div>
                             <li className="my-2">
                                 <ul className="md:ml-4 list-inside list-none md:list-disc">
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Wrote iOS implementation from scratch</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Transformed mobile codebase to use modern frameworks</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Added theming and i18n support</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Wrote the iOS app from scratch for MentraOS, the leading open-source smart glasses platform and SDK (1.9k+ GitHub stars, published on the App Store and Google Play)</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Led a modernization of the mobile codebase, migrating to current frameworks and architecture</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and implemented theming and internationalization (i18n) support across the mobile app</li>
                                 </ul>
                             </li>
                         </ul>
@@ -98,10 +98,9 @@ export default function AboutMe({ preview = false }) {
                             </div>
                             <li className="my-2">
                                 <ul className="md:ml-4 list-inside list-none md:list-disc">
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Added Bitcoin Lightning support</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Responsible for the Tor protocol implementation</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Added support for the Nano cryptocurrency</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and brought features to market in a timely manner</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and shipped Cake Wallet features to market on aggressive timelines</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Owned the Tor protocol implementation for private, anonymized network traffic</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Implemented support for the Bitcoin Lightning Network and the Nano cryptocurrency</li>
                                 </ul>
                             </li>
                         </ul>
@@ -128,8 +127,8 @@ export default function AboutMe({ preview = false }) {
                             <li className="my-2">
                                 <ul className="md:ml-4 list-inside list-none md:list-disc">
                                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Designed and built products for the cryptocurrency community</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Utilized the latest in cryptographic technologies to innovate new user experiences</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Worked to build decentralized and reliable product solutions that scale</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Applied modern cryptographic techniques to create new user experiences</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Built decentralized, reliable product solutions designed to scale</li>
                                 </ul>
                             </li>
                         </ul>}
@@ -141,7 +140,7 @@ export default function AboutMe({ preview = false }) {
                             <div className="flex flex-row justify-between pt-2">
                                 <div className="flex flex-col items-start space-y-1">
                                     <div className="text-lg bg-white dark:bg-gray-800 rounded-md px-2 w-max">Vulnerability Researcher</div>
-                                    <div className="bg-white dark:bg-gray-800 rounded-md px-2">Raytheon Technologies</div>
+                                    <div className="bg-white dark:bg-gray-800 rounded-md px-2">Raytheon Technologies (CODEX)</div>
                                 </div>
                                 <div className="bg-white dark:bg-gray-800 rounded-md px-2 py-1 text-xs md:text-sm h-fit mt-1 ml-2">
                                     May 2019 - Feb 2022
@@ -150,9 +149,10 @@ export default function AboutMe({ preview = false }) {
                             <li className="my-2">
                                 <ul className="md:ml-4 list-inside list-none md:list-disc">
                                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Analyzed hardware, software, and network applications with and without source code</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Discovered, performed root cause analysis, and created exploits for security vulnerabilities in software systems</li>
                                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Leveraged static and dynamic software analysis tools such as IDA Pro, Ghidra, and Binary Ninja</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Developed and reverse engineered primarily in assembly languages and C/C++/Python</li>
-                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Acquired extensive experience with Android and Ghidra Development</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Worked in assembly languages and developed mostly in C/C++, Python, and Java</li>
+                                    <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Extensive development and reverse engineering experience with Android and Ghidra</li>
                                     <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Contributed to the development of mission-critical systems and technologies</li>
                                 </ul>
                             </li>
@@ -179,7 +179,7 @@ export default function AboutMe({ preview = false }) {
                                     </div>
                                     <ul className="md:ml-4 list-inside list-none md:list-disc text-xs sm:text-base">
                                         <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">The first-ever usermode driver for the Nintendo Switch JoyCons and Pro Controller</li>
-                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Currently used by thousands to play PC games with JoyCons / Pro Controller</li>
+                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">1.1k+ GitHub stars, currently used by thousands to play PC games with JoyCons / Pro Controller</li>
                                         <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Contributed to the Reverse Engineering efforts that made the project possible</li>
                                     </ul>
                                 </li>
@@ -189,7 +189,7 @@ export default function AboutMe({ preview = false }) {
                                 <li className="my-2">
                                     <div className="flex flex-row justify-between font-medium">
                                         <span className="space-y-2">
-                                            <a href="https://nautilus.io" className="md:text-lg bg-white dark:bg-gray-800 rounded-md px-2 py-1">Nautilus - Cryptocurrency Wallet </a>
+                                            <a href="https://nautilus.io" className="md:text-lg bg-white dark:bg-gray-800 rounded-md px-2 py-1">Nautilus - NANO Wallet</a>
                                             <SkillTags skills={["Flutter", "Dart", "Kubernetes", "iOS", "Android"]} />
                                         </span>
                                         <a href="https://nautilus.io" target="_blank" className="hidden sm:block">
@@ -197,8 +197,26 @@ export default function AboutMe({ preview = false }) {
                                         </a>
                                     </div>
                                     <ul className="md:ml-4 list-inside list-none md:list-disc text-xs sm:text-base">
-                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Advanced cryptocurrency wallet, with first-class design and utility</li>
-                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Available on the App and Google Play Store</li>
+                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">One of the most advanced NANO cryptocurrency wallets available, with first-class design and utility</li>
+                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Available on the App Store and Google Play</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul className="bg-gray-300 dark:bg-gray-700 list-inside px-4 sm:px-8 rounded-md py-1">
+                                <li className="my-2">
+                                    <div className="flex flex-row justify-between font-medium">
+                                        <span className="space-y-2">
+                                            <span className="md:text-lg bg-white dark:bg-gray-800 rounded-md px-2 py-1">Vulkan-Engine</span>
+                                            <SkillTags skills={["C/C++", "Vulkan", "OpenGL", "GLSL"]} />
+                                        </span>
+                                        <a href="https://github.com/fossephate/Vulkan-Engine" target="_blank" className="hidden sm:block">
+                                            github.com/fossephate/Vulkan-Engine
+                                        </a>
+                                    </div>
+                                    <ul className="md:ml-4 list-inside list-none md:list-disc text-xs sm:text-base">
+                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Vulkan-based rendering engine with Bullet3 physics integration</li>
+                                        <li className="my-1 py-1 px-4 bg-white dark:bg-gray-800 rounded-md shadow">Supports SSAO and directional shadow mapping</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -229,11 +247,11 @@ export default function AboutMe({ preview = false }) {
                             <div className="grid grid-cols-7 gap-4 p-2 dark:border-gray-600 bg-gray-300 dark:bg-gray-700 rounded-md">
                                 <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Languages</div>
                                 <div className="px-4 py-2 text-sm sm:text-base col-span-5 bg-white dark:bg-gray-800 rounded-md shadow">
-                                    Rust, JavaScript/Typescript, Dart, Python2/3, Go, C#, C/C++, Java, Lua
+                                    Swift, Kotlin, Rust, JavaScript/TypeScript, Dart, Python 2/3, Go, C#, C/C++, Java, Lua
                                 </div>
                                 <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Frameworks</div>
                                 <div className="px-4 py-2 text-sm sm:text-base col-span-5 bg-white dark:bg-gray-800 rounded-md shadow">
-                                    Node.js, React, Redux, Next.js, Tailwind CSS, PostgresSQL, Flutter
+                                    Node.js, React, React Native, Redux, Next.js, Flutter, Tailwind CSS, PostgreSQL
                                 </div>
                                 <div className="px-4 py-2 sm:text-lg font-medium col-span-2">Tech</div>
                                 <div className="px-4 py-2 text-sm sm:text-base col-span-5 bg-white dark:bg-gray-800 rounded-md shadow">
@@ -248,8 +266,8 @@ export default function AboutMe({ preview = false }) {
                                 <li className="my-2">
                                     <div className="flex flex-row justify-between font-medium">
                                         {/* <span> */}
-                                        <span>AS Computer Science </span>
-                                        <span className="text-sm font-normal italic">University of Central Florida, Orlando</span>
+                                        <span>A.S. Computer Science </span>
+                                        <span className="text-sm font-normal italic">University of Central Florida, Orlando, FL</span>
                                         {/* </span> */}
                                     </div>
                                 </li>
@@ -262,7 +280,7 @@ export default function AboutMe({ preview = false }) {
             </div>
             {preview && (
                 <>
-                    <Link className="text-blue-500 hover:underline text-center block" href="/about">
+                    <Link className="relative z-10 text-blue-500 hover:underline text-center block py-2" href="/about">
                         View More
                     </Link>
                 </>
